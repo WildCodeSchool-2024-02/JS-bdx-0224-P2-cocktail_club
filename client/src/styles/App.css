@@ -1,0 +1,17 @@
+:root {
+  --primaryColor: #213140;
+  --secondaryColor: #f29d52;
+  --textColor: #f0f2f8;
+  --secondaryColorAlt: #ee7e1b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
