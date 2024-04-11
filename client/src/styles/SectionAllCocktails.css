@@ -6,8 +6,12 @@
   gap: 1rem;
 }
 
-img {
-  width: clamp(280px, 100%, 700px);
+h2 {
+  color: green;
+}
+
+.allCocktailsSection > img {
+  width: clamp(260px, 100%, 700px);
   border-radius: 15px;
 }
 
