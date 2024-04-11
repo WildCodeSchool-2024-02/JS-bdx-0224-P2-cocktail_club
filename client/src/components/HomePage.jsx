@@ -1,6 +1,6 @@
 import "../styles/HomePage.css";
 import SeasonCard from "./SeasonCard";
-import AllCocktails from "./AllCocktails";
+import SectionAllCocktails from "./SectionAllCocktails";
 import CocktailsSection from "./CocktailsSection";
 
 function HomePage() {
@@ -8,7 +8,7 @@ function HomePage() {
     <main>
       <SeasonCard />
       <CocktailsSection />
-      <AllCocktails />
+      <SectionAllCocktails />
     </main>
   );
 }

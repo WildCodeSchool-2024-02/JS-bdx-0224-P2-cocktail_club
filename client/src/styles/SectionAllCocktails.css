@@ -1,0 +1,21 @@
+.allCocktailsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+img {
+  width: clamp(280px, 100%, 700px);
+  border-radius: 15px;
+}
+
+img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.buttonBorder {
+  border: 3px solid var(--textColor);
+}
