@@ -1,24 +1,27 @@
 footer {
-  background-color: rgb(26, 39, 51);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  font-family: "Pontano sans", sans-serif;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-footer > img {
+footer > a > img {
   width: 6rem;
-  display: inline-block;
 }
 
 footer > ul {
   color: rgb(242, 157, 82);
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-@media screen and (max-width: 640px) {
-  footer > ul {
-    margin-right: 1rem;
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 1rem;
   }
 }
