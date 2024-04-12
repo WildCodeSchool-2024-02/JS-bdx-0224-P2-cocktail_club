@@ -1,22 +1,34 @@
-function Navbar() {
-  return (
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
-        officia voluptatem necessitatibus facere nostrum modi. Natus nemo
-        magnam, tempora, velit tempore vero deserunt repellat fuga modi error
-        qui alias accusamus? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Alias iure dolorem totam saepe, libero aliquam hic necessitatibus
-        voluptatibus iusto neque asperiores nam, maiores nemo voluptas debitis
-        minus! Quaerat, sed veritatis dicta cupiditate quae, maiores pariatur
-        alias expedita voluptatem qui voluptate corrupti, officia repellat
-        similique! Sequi nostrum aut at dolor mollitia neque aliquid,
-        necessitatibus, id minima iste iusto, optio voluptatibus! Omnis, cum.
-        Aliquam animi suscipit laboriosam labore. Ullam maxime neque rerum modi!
-        Dolorem, delectus. Quos, tempora voluptatum quis corporis ad similique
-        ab tempore laudantium labore odio dolor voluptate possimus adipisci
-        soluta iure iste quasi ipsam nisi natus voluptas nulla. Velit, eligendi.
-      </p>
-  );
-}
+import { useState } from "react";
+import "../styles/Navbar.css";
+
+function Navbar () {
+
+    const [menuState, setMenuState] = useState ({
+        burgerClass:"≡",
+        menuClass:"hide-menu",
+        isMenuClicked:false
+    });
+
+    const updateMenu = () => {
+            setMenuState(previousState =>({
+                burgerClass: previousState.isMenuClicked? "≡":"x",
+                menuClass: previousState.isMenuClicked? "hide-menu":"unhide-menu",
+                isMenuClicked: !previousState.isMenuClicked
+            }));
+        };
+
+    return (
+        <nav>
+            <img src="src\assets\images\Logo_Cocktails_Club.png" alt="Logo Cocktail Club"/>
+            <h1>COCKTAIL CLUB</h1>
+            <button type="button" onClick={updateMenu} onKeyDown={updateMenu}>{menuState.burgerClass}</button>
+            <ul className={menuState.menuClass}>
+                <li>Surprise cocktail</li>
+                <li>All our club cocktails</li>
+                <li>Back home</li>
+            </ul>
+        </nav>
+    )
+} 
 
 export default Navbar;
