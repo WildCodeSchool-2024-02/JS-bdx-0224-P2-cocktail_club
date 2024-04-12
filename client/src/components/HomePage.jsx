@@ -1,4 +1,3 @@
-import "../styles/HomePage.css";
 import SeasonCard from "./SeasonCard";
 import AllCocktails from "./AllCocktails";
 import CocktailsSection from "./CocktailsSection";
@@ -6,7 +5,7 @@ import CocktailsSection from "./CocktailsSection";
 function HomePage() {
   return (
     <main>
-      <SeasonCard />
+      <SeasonCard season="Spring" />
       <CocktailsSection />
       <AllCocktails />
     </main>
@@ -14,3 +13,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

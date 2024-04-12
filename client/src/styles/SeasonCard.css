@@ -1,0 +1,23 @@
+.card {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.card:nth-child(1) {
+  background-image: url("assets/images/spring.webp");
+}
+
+.card:nth-child(2) {
+  background-image: url("assets/images/summer.webp");
+}
+
+.card:nth-child(3) {
+  background-image: url("assets/images/autumn.webp");
+}
+
+.card:nth-child(4) {
+  background-image: url("assets/images/winter.webp");
+}
