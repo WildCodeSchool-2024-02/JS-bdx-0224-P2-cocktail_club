@@ -4,15 +4,18 @@ nav {
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  background-color: var(--primaryColor);
+  padding: 0 2rem;
 }
+
 img {
   width: 5rem;
 }
+
 h1 {
   font-size: 1.3rem;
   color: var(--secondaryColor);
 }
+
 button {
   width: 5rem;
   background-color: var(--primaryColor);
