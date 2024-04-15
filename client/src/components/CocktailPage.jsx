@@ -1,6 +1,5 @@
 function CocktailPage() {
-  return <>
-  </>;
+  return <p>errh</p>;
 }
 
 export default CocktailPage;
