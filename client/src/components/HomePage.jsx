@@ -5,7 +5,12 @@ import CocktailsSection from "./CocktailsSection";
 function HomePage() {
   return (
     <main>
+      <section className="season-section">
       <SeasonCard season="Spring" />
+      <SeasonCard season="Summer" />
+      <SeasonCard season="Autumn" />
+      <SeasonCard season="Winter" />
+      </section>
       <CocktailsSection />
       <AllCocktails />
     </main>
@@ -13,4 +18,3 @@ function HomePage() {
 }
 
 export default HomePage;
-

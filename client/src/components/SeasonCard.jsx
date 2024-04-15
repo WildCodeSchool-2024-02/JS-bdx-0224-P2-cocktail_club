@@ -1,22 +1,36 @@
 import PropTypes from 'prop-types';
-
 import "../styles/SeasonCard.css";
 import OrangeButton from "./OrangeButton"; 
 
-function SeasonCard({ image, season }) {
+function SeasonCard({ season }) {
+  let seasonClassName;
+
+  switch (season.toLowerCase()) {
+    case "spring":
+      seasonClassName = "spring";
+      break;
+    case "summer":
+      seasonClassName = "summer";
+      break;
+    case "autumn":
+      seasonClassName = "autumn";
+      break;
+    case "winter":
+      seasonClassName = "winter";
+      break;
+    default:
+      seasonClassName = "";
+  }
+
   return (
-    <article className="card">
-      <img src={image} alt={season} /> {/* Use the image and season props */}
-      <h2>{season}</h2>
-      <OrangeButton text={season} />
+    <article className={`card ${seasonClassName}`}>
+      <OrangeButton season={season} />
     </article>
-  );
+  );  
 }
 
 SeasonCard.propTypes = {
-  image: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired
 };
 
 export default SeasonCard;
-

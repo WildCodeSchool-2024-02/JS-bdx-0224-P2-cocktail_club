@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
-function OrangeButton({ text }) {
-  const handleClick = () => {
-  };
+function OrangeButton({ season }) {
   return (
-    <button type="button" onClick={handleClick}>
-      {text}
-    </button>
+  <a href={`${season.toLowerCase()}`} className="orange-button">
+    <p className="season">{season}</p> 
+  </a>
   );
 }
 
 OrangeButton.propTypes = {
-  text: PropTypes.string.isRequired,
+  season: PropTypes.string.isRequired
 };
 
 export default OrangeButton;
