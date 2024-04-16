@@ -1,20 +1,9 @@
-:root {
-  --primary: #213140;
-  --secondary: #f29d52;
-  --text-color: #f0f2f8;
-  --secondary-alt: #ee7e1b;
-}
-
 .season-section {
+  position: relative;
+  left: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-}
-
-.season {
-  font-family: var(--primaryFont);
-  font-size: 25px;
-  color: var(--text-color);
 }
 
 .card {
@@ -22,14 +11,15 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: calc(50vh);
+  min-height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 1rem;
 }
 
 .card:first-of-type {
-  margin-top: 70px;
+  margin-top: 4.5rem;
 }
 
 .card::before {
@@ -47,7 +37,7 @@
 }
 
 .summer {
-  background-image: url("../assets/images/summer2.webp");
+  background-image: url("../assets/images/summer1.webp");
 }
 
 .autumn {
@@ -70,6 +60,9 @@
   border: none;
   z-index: 1;
   transition: all 0.3s ease;
+  font-family: var(--primaryFont);
+  color: var(--textColor);
+  font-size: 1.5rem;
 }
 
 .orange-button::before,
@@ -78,7 +71,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 3px solid var(--secondary-alt);
+  border: 3px solid var(--secondaryColorAlt);
 }
 
 .orange-button::before {
@@ -99,7 +92,7 @@
   .card {
     position: relative;
     height: calc(100vh - 90px);
-    min-width: 25vw;
+    min-width: 33vw;
     width: 100%;
   }
   .card:first-of-type {
@@ -107,19 +100,21 @@
   }
 
   .spring {
-    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 66% 100%, 0 100%);
+    max-width: 28vw;
   }
   .summer {
-    clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
-    margin-left: -100px;
+    clip-path: polygon(33.3% 0, 100% 0, 66.6% 100%, 0 100%);
+    margin-left: -13vw;
   }
   .autumn {
-    clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
-    margin-left: -100px;
+    clip-path: polygon(33.3% 0, 100% 0, 66.6% 100%, 0 100%);
+    margin-left: -13vw;
   }
   .winter {
-    clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
-    margin-left: -150px;
+    clip-path: polygon(33.3% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -13vw;
+    max-width: 28vw;
   }
 
   .spring:hover::before,
@@ -134,8 +129,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
   }
 
   .orange-button::before,

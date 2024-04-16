@@ -1,8 +1,8 @@
 footer {
   display: flex;
   justify-content: space-between;
-  font-family: "Pontano sans", sans-serif;
-  padding: 1rem 1rem;
+  font-family: var(--secondaryFont);
+  padding: 1rem;
 }
 
 footer > img {

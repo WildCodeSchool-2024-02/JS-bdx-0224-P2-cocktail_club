@@ -1,4 +1,3 @@
-import "../styles/AllCocktails.css";
 
 function AllCocktails() {
   return (
