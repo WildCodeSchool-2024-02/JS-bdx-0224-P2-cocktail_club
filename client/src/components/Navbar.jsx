@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav>
       <img
-        src="src\assets\images\Logo_Cocktails_Club.png"
+        src="./src/assets/images/logo.svg"
         alt="Logo Cocktail Club"
       />
       <h1>COCKTAIL CLUB</h1>

@@ -1,8 +1,7 @@
 import "../styles/HomePage.css";
-import SeasonCard from "./SeasonCard";
-import AllCocktails from "./AllCocktails";
-import CocktailsSection from "./CocktailsSection";
-import Api from "./Api";
+import SeasonCard from "../components/SeasonCard";
+import AllCocktails from "../components/AllCocktails";
+import CocktailsSection from "../components/CocktailsSection";
 
 function HomePage() {
   return (
@@ -10,7 +9,6 @@ function HomePage() {
       <SeasonCard />
       <CocktailsSection />
       <AllCocktails />
-      <Api />
     </main>
   );
 }

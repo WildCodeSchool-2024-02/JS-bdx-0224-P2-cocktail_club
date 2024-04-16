@@ -2,7 +2,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-family: "Pontano sans", sans-serif;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 footer > img {
@@ -15,17 +15,12 @@ footer > ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 li > a {
-  color: rgb(242, 157, 82);
+  color: var(--secondaryColorAlt);
   align-items: center;
   text-decoration: none;
-}
-
-@media screen and (max-width: 640px) {
-  footer > ul {
-    margin-right: 1rem;
-  }
 }
