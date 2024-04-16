@@ -3,8 +3,6 @@
   --secondary: #f29d52;
   --text-color: #f0f2f8;
   --secondary-alt: #ee7e1b;
-  --primaryFont: "Bebas Neue", sans-serif;
-  --secondaryFont: "Pontano Sans", sans-serif;
 }
 
 .season-section {
@@ -20,6 +18,9 @@
 }
 
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   min-height: calc(50vh);
   background-size: cover;
@@ -63,7 +64,6 @@
   padding-left: 50px;
   padding-right: 50px;
   top: 50%;
-  left: 25%;
   color: var(--text-color);
   text-align: center;
   text-decoration: none;
@@ -98,9 +98,12 @@
 
   .card {
     position: relative;
-    height: 70vh;
+    height: calc(100vh - 90px);
     min-width: 25vw;
     width: 100%;
+  }
+  .card:first-of-type {
+    margin-top: 0px;
   }
 
   .spring {

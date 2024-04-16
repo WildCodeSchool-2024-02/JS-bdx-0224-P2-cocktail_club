@@ -1,9 +1,8 @@
 footer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   font-family: "Pontano sans", sans-serif;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 footer > img {
@@ -14,6 +13,7 @@ footer > img {
 footer > ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -25,8 +25,8 @@ li > a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 640px) {
-  footer > ul {
-    margin-right: 1rem;
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 1rem 3rem;
   }
 }

@@ -6,8 +6,6 @@ function AllCocktails() {
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius harum
         quisquam quis blanditiis nam dolorum quia assumenda deserunt? Quisquam,
-        
-       
       </p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quas!

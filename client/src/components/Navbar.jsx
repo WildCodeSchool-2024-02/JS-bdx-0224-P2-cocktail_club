@@ -6,10 +6,7 @@ function Navbar() {
 
   return (
     <nav>
-      <img
-        src="./src/assets/images/logo.svg"
-        alt="Logo Cocktail Club"
-      />
+      <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
       <h1>COCKTAIL CLUB</h1>
       <button type="button" onClick={() => setMenuState(!menuState)}>
         {menuState ? "x" : "≡"}
