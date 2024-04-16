@@ -1,6 +1,7 @@
 import SeasonCard from "./SeasonCard";
 import AllCocktails from "./AllCocktails";
 import CocktailsSection from "./CocktailsSection";
+import Api from "./Api";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       </section>
       <CocktailsSection />
       <AllCocktails />
+      <Api />
     </main>
   );
 }
