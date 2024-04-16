@@ -3,24 +3,16 @@ import "../styles/SeasonCard.css";
 import OrangeButton from "./OrangeButton"; 
 
 function SeasonCard({ season }) {
-  let seasonClassName;
 
-  switch (season.toLowerCase()) {
-    case "spring":
-      seasonClassName = "spring";
-      break;
-    case "summer":
-      seasonClassName = "summer";
-      break;
-    case "autumn":
-      seasonClassName = "autumn";
-      break;
-    case "winter":
-      seasonClassName = "winter";
-      break;
-    default:
-      seasonClassName = "";
-  }
+  const seasonClassNames = {
+    spring: "spring",
+    summer: "summer",
+    autumn: "autumn",
+    winter: "winter"
+  };
+  
+  const normalizedSeason = season.toLowerCase();
+  const seasonClassName = seasonClassNames[normalizedSeason];
 
   return (
     <article className={`card ${seasonClassName}`}>
