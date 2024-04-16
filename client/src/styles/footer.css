@@ -19,7 +19,7 @@ footer > ul {
 }
 
 li > a {
-  color: rgb(242, 157, 82);
+  color: var(--secondaryColorAlt);
   align-items: center;
   text-decoration: none;
 }

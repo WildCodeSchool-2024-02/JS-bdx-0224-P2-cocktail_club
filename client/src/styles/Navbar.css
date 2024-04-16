@@ -5,6 +5,9 @@ nav {
   width: 100%;
   height: 5rem;
   padding: 0 2rem;
+  position: fixed;
+  background-color: var(--primaryColor);
+  z-index: 100;
 }
 
 img {
@@ -13,13 +16,14 @@ img {
 
 h1 {
   font-size: 1.3rem;
-  color: var(--secondaryColor);
+  text-align: center;
+  color: var(--secondaryColorAlt);
 }
 
 button {
   width: 5rem;
   background-color: var(--primaryColor);
-  color: var(--secondaryColor);
+  color: var(--secondaryColorAlt);
   font-size: 3rem;
   border: none;
 }
@@ -29,17 +33,20 @@ button {
   height: calc(100vh - 5rem);
   width: 100%;
   background-color: var(--primaryColor);
-  color: var(--secondaryColor);
+  color: var(--secondaryColorAlt);
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   opacity: 0;
-  transform: translateY(-150vw);
+  transform: translateY(-100vh);
   transition: all 0.3s;
 }
 .burger-menu.active {
   opacity: 1;
   transform: translateY(0);
+  z-index: 100;
+  position: absolute;
+  left: 0;
 }
