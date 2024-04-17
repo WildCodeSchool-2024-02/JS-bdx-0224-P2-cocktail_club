@@ -11,25 +11,6 @@ import CategoryPage from "./pages/CategoryPage";
 
 // router creation
 
-const getSomeData = (id) => {
-  const allData = {
-    spring: {
-      title: "Lorem Ipsum",
-      content: "Lorem ipsum dolor sit amet",
-    },
-    summer: {
-      title: "Schnapsum",
-      content: "Lorem Elsass ipsum Salut bisamme",
-    },
-    winter: {
-      title: "Cupcake Ipsum",
-      content: "Tiramisu pastry wafer brownie soufflé",
-    },
-  };
-
-  return allData[id];
-};
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -39,9 +20,9 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/season/:id",
+        path: "/:id",
         element: <CategoryPage />,
-        loader: ({ params }) => getSomeData(params.id)
+        // loader: ({ params }) => getSomeData(params.id)
       },
       {
         path: "/cocktail/:id",

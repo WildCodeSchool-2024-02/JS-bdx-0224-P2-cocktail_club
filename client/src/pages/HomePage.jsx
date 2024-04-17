@@ -1,14 +1,14 @@
-import "../styles/HomePage.css";
 import SeasonCard from "../components/SeasonCard";
-import AllCocktails from "../components/AllCocktails";
-import CocktailsSection from "../components/CocktailsSection";
 
 function HomePage() {
   return (
     <main className="homePage">
-      <SeasonCard />
-      <CocktailsSection />
-      <AllCocktails />
+      <section className="season-section">
+        <SeasonCard season="Spring" />
+        <SeasonCard season="Summer" />
+        <SeasonCard season="Autumn" />
+        <SeasonCard season="Winter" />
+      </section>
     </main>
   );
 }

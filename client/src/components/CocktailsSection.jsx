@@ -1,5 +1,3 @@
-import "../styles/CocktailsSection.css";
-
 function CocktailsSection() {
   return (
     <>
