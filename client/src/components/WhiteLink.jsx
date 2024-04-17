@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function WhiteButton({ text }) {
+function WhiteLink({ text }) {
   return (
     <button type="button" className="white-button">
       {text}
@@ -8,8 +8,8 @@ function WhiteButton({ text }) {
   );
 }
 
-WhiteButton.propTypes = {
+WhiteLink.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default WhiteButton;
+export default WhiteLink;
