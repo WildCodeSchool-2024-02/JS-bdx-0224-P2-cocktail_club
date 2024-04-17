@@ -10,7 +10,7 @@ function CocktailCard({ cocktail }) {
       <img src={img} alt={name} />
       <h2 className="cocktailTitle">{name}</h2>
       <p>{description}</p>
-      <OrangeLink cocktailName={name} id={id} />
+      <OrangeLink name={name} id={id} />
     </article>
   );
 }

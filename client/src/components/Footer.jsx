@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../styles/footer.css";
 
 function Footer() {
   return (
@@ -8,7 +8,7 @@ function Footer() {
       </a>
       <ul>
         <li>
-          <a href="linkk">Summer</a>
+          <a href="link">Summer</a>
         </li>
         <li>
           <a href="link">Winter</a>

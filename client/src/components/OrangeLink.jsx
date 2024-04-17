@@ -1,26 +1,22 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-function OrangeLink({ season, cocktailName, id }) {
+function OrangeLink({ name, id }) {
   return (
-    <a
-      href={season ? `/${season}` : `/cocktail/${id}`}
-      className="orange-button"
-    >
-      {season ? `${season}` : `${cocktailName}`}
-    </a>
+    <Link to={id ? `cocktails/${id}` : `season/${name}`}className="orange-button" >
+      {name}
+    </Link>
   );
 }
 
 OrangeLink.propTypes = {
-  season: PropTypes.string,
-  cocktailName: PropTypes.string,
-  id: PropTypes.number,
+  name: PropTypes.string.isRequired, 
+  id: PropTypes.number, 
 };
 
 OrangeLink.defaultProps = {
-  season: "",
-  cocktailName: "Default Cocktail",
   id: 0,
 };
 
 export default OrangeLink;
+
