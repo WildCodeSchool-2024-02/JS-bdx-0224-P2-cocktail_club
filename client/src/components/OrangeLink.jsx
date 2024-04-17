@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function OrangeButton({ season }) {
+function OrangeLink({ season }) {
   return (
     <a href={`${season.toLowerCase()}`} className="orange-button">
       {season}
@@ -8,8 +8,8 @@ function OrangeButton({ season }) {
   );
 }
 
-OrangeButton.propTypes = {
+OrangeLink.propTypes = {
   season: PropTypes.string.isRequired,
 };
 
-export default OrangeButton;
+export default OrangeLink;

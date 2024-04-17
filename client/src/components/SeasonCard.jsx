@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "../styles/SeasonCard.css";
-import OrangeButton from "./OrangeButton";
+import OrangeLink from "./OrangeLink";
 
 function SeasonCard({ season }) {
   const seasonClassNames = {
@@ -15,7 +15,7 @@ function SeasonCard({ season }) {
 
   return (
     <article className={`card ${seasonClassName}`}>
-      <OrangeButton season={season} />
+      <OrangeLink season={season} />
     </article>
   );
 }
