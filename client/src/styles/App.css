@@ -1,11 +1,15 @@
 @font-face {
   font-family: "Pontano Sans";
-  src: url("./fonts/PontanoSans-Regular.ttf");
+  src:
+    local("PontanoSans-Regular"),
+    url("./fonts/PontanoSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("./fonts/BebasNeue-Regular.ttf");
+  src:
+    local("BebasNeue-Regular"),
+    url("./fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 
 :root {

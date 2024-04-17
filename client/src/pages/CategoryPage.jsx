@@ -30,7 +30,7 @@ const cocktails = [
 
 function CategoryPage() {
   return (
-    <main>
+    <main className="categoryPage">
       {cocktails.map((cocktail) => (
         <CocktailCard key={cocktail.id} cocktail={cocktail} />
       ))}

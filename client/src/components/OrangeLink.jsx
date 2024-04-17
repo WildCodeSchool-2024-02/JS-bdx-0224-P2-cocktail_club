@@ -1,9 +1,15 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import styles from "../styles/OrangeLink.module.css";
 
-function OrangeLink({ name, id }) {
+function OrangeLink({ name, path }) {
   return (
-    <Link to={id ? `${id}` : `${name}`} className="orange-button">
+    <Link
+      to={path}
+      className={
+        path.includes("season") ? "orange-button" : styles.orangeButton
+      }
+    >
       {name}
     </Link>
   );
@@ -11,11 +17,7 @@ function OrangeLink({ name, id }) {
 
 OrangeLink.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.number,
-};
-
-OrangeLink.defaultProps = {
-  id: 0,
+  path: PropTypes.string.isRequired,
 };
 
 export default OrangeLink;

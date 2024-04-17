@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import "../styles/CocktailCard.css";
 import OrangeLink from "./OrangeLink";
+import "../styles/CocktailCard.css";
 import "../styles/SeasonCard.css";
 
 function CocktailCard({ cocktail }) {
@@ -11,7 +11,7 @@ function CocktailCard({ cocktail }) {
       <img src={img} alt={name} />
       <h2 className="cocktailTitle">{name}</h2>
       <p>{description}</p>
-      <OrangeLink name={name} id={id} className="orange-button" />
+      <OrangeLink name={name} path={`cocktails/${id}`} />
     </article>
   );
 }

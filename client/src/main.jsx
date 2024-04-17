@@ -20,12 +20,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/:id",
+        path: "/season/:id",
         element: <CategoryPage />,
         // loader: ({ params }) => getSomeData(params.id)
       },
       {
-        path: "/cocktail/:id",
+        path: "/cocktails/:id",
         element: <CocktailPage />,
       },
     ],
