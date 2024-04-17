@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Pontano Sans";
-  src: url(./src/fonts/PontanoSans-Regular.ttf);
+  src: url("./fonts/PontanoSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url(./src/fonts/BebasNeue-Regular.ttf) format("woff");
+  src: url("./fonts/BebasNeue-Regular.ttf");
 }
 
 :root {
@@ -13,8 +13,8 @@
   --secondaryColor: #f29d52;
   --textColor: #f0f2f8;
   --secondaryColorAlt: #ee7e1b;
-  --titleFont: "Pontano Sans";
-  --textFamily: "Bebas Neue";
+  --primaryFont: "Bebas Neue", sans-serif;
+  --secondaryFont: "Pontano Sans", sans-serif;
 }
 
 * {
@@ -27,7 +27,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--primaryColor);
-  color: var(--secondaryColor);
   font-size: 1rem;
-  padding: 1rem;
+  color: var(--textColor);
+  font-family: var(--secondaryFont);
 }

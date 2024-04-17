@@ -1,10 +1,8 @@
-import "../styles/CocktailsSection.css";
-
 function CocktailsSection() {
   return (
     <>
-      <p>a</p>
-      <p>a</p>
+      <p>cocktail1</p>
+      <p>cocktail2</p>
     </>
   );
 }

@@ -1,0 +1,32 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--secondaryFont);
+  padding: 1rem;
+}
+
+footer > img {
+  width: 6rem;
+  display: inline-block;
+}
+
+footer > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+li > a {
+  color: var(--secondaryColorAlt);
+  align-items: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 1rem 3rem;
+  }
+}

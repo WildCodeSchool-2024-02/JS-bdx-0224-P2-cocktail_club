@@ -1,27 +1,27 @@
-import "../styles/CocktailCard.css";
 import PropTypes from "prop-types";
-
-// import OrangeButton from './OrangeButton'
+import "../styles/CocktailCard.css";
+import OrangeButton from "./OrangeButton";
 
 function CocktailCard({ cocktail }) {
-    const { name, img, description } = cocktail;
+  const { name, img, description, id } = cocktail;
 
-    return (
-        <article className="cocktailCard">
-            <img src={img} alt={name} />
-            <h2 className="cocktailTitle">{name}</h2>
-            <p>{description}</p>
-            {/* button */}
-        </article>
-    );
+  return (
+    <article className="cocktailCard">
+      <img src={img} alt={name} />
+      <h2 className="cocktailTitle">{name}</h2>
+      <p>{description}</p>
+      <OrangeButton cocktailName={name} id={id} />
+    </article>
+  );
 }
 
 CocktailCard.propTypes = {
-    cocktail: PropTypes.shape ({
-        name: PropTypes.string.isRequired,
-        img: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-    }).isRequired,
-}
+  cocktail: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  }).isRequired,
+};
 
 export default CocktailCard;

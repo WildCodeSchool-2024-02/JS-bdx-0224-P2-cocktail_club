@@ -1,14 +1,15 @@
+// import { Outlet } from "react-router-dom";
 import "./styles/App.css";
-import HomePage from "./components/HomePage";
-import CocktailPage from "./components/CocktailPage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import CategoryPage from "./components/CategoryPage";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <Navbar />
       <CategoryPage />
-      <CocktailPage />
+      <Footer />
     </>
   );
 }
