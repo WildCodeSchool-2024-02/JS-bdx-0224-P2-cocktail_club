@@ -15,7 +15,7 @@ function SeasonCard({ season }) {
 
   return (
     <article className={`card ${seasonClassName}`}>
-      <OrangeLink season={season} />
+      <OrangeLink season={season.toLowerCase()} />
     </article>
   );
 }

@@ -16,7 +16,7 @@ img {
 }
 
 h1 {
-  font-size: 1.3rem;
+  font-size: clamp(1.3rem, 4vw, 2.5rem);
   text-align: center;
   color: var(--secondaryColorAlt);
   font-family: var(--primaryFont);
@@ -38,7 +38,7 @@ button {
   width: 100%;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@ button {
   opacity: 0;
   transform: translateY(-100vh);
   transition: all 0.3s;
+  text-align: center;
 }
 .burger-menu.active {
   opacity: 1;

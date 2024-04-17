@@ -1,15 +1,26 @@
 import PropTypes from "prop-types";
 
-function OrangeLink({ season }) {
+function OrangeLink({ season, cocktailName, id }) {
   return (
-    <a href={`${season.toLowerCase()}`} className="orange-button">
-      {season}
+    <a
+      href={season ? `/${season}` : `/cocktail/${id}`}
+      className="orange-button"
+    >
+      {season ? `${season}` : `${cocktailName}`}
     </a>
   );
 }
 
 OrangeLink.propTypes = {
-  season: PropTypes.string.isRequired,
+  season: PropTypes.string,
+  cocktailName: PropTypes.string,
+  id: PropTypes.number,
+};
+
+OrangeLink.defaultProps = {
+  season: "",
+  cocktailName: "Default Cocktail",
+  id: 0,
 };
 
 export default OrangeLink;

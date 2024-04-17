@@ -4,11 +4,5 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-}
-
-@media screen and (min-width: 992px) {
-  .homePage {
-    padding: 1rem 3rem;
-  }
+  padding: 1rem 0;
 }
