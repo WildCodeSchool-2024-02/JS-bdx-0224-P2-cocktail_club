@@ -3,25 +3,25 @@ import OrangeLink from "./OrangeLink";
 import "../styles/CocktailCard.css";
 import "../styles/SeasonCard.css";
 
-function CocktailCard({ cocktail }) {
-  const { name, img, description, id } = cocktail;
+function CocktailCard({ drink }) {
+  const { strDrink, strDrinkThumb, strInstructions, idDrink } = drink;
 
   return (
     <article className="cocktailCard">
-      <img src={img} alt={name} />
-      <h2 className="cocktailTitle">{name}</h2>
-      <p>{description}</p>
-      <OrangeLink name={name} path={`cocktails/${id}`} />
+      <img src={strDrinkThumb} alt={strDrink} />
+      <h2 className="cocktailTitle">{strDrink}</h2>
+      <p>{strInstructions}</p>
+      <OrangeLink name={strDrink} path={`cocktails/${idDrink}`} />
     </article>
   );
 }
 
 CocktailCard.propTypes = {
-  cocktail: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+  drink: PropTypes.shape({
+    strDrink: PropTypes.string.isRequired,
+    strDrinkThumb: PropTypes.string.isRequired,
+    strInstructions: PropTypes.string.isRequired,
+    idDrink: PropTypes.number.isRequired,
   }).isRequired,
 };
 
