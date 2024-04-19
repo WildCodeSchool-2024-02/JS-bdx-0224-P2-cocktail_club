@@ -10,10 +10,7 @@ function SectionAllCocktails() {
       />
       <h2>All of Cocktail Club</h2>
       <p>erbtrngyfgvshtrgvj,ngfnbfdhnf,ghfgvghdg,fgnhfa</p>
-      <OrangeLink 
-      name="Check all Cocktails" 
-      path="allCocktails"
-      />
+      <OrangeLink name="Check all Cocktails" path="allCocktails" />
     </section>
   );
 }

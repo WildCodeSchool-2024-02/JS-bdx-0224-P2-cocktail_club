@@ -7,7 +7,9 @@ function Navbar() {
 
   return (
     <nav>
-      <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
+      <Link to="/">
+        <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
+      </Link>
       <h1>COCKTAIL CLUB</h1>
       <button type="button" onClick={() => setMenuState(!menuState)}>
         {menuState ? "x" : "≡"}
@@ -15,8 +17,8 @@ function Navbar() {
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>Surprise cocktail</li>
         <li>All our club cocktails</li>
-        <li>
-          <Link to="/">Back to Home</Link>
+        <li className="home-link">
+          <Link to="/">Home Page</Link>
         </li>
       </ul>
     </nav>

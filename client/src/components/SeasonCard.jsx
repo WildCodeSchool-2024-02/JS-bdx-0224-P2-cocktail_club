@@ -18,7 +18,7 @@ function SeasonCard({ season }) {
       <OrangeLink
         name={season.toLowerCase()}
         path={`season/${season.toLowerCase()}`}
-        class="orange-button"
+        classname="orange-button"
       />
     </article>
   );

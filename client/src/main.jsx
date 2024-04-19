@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/season/:id",
         element: <CategoryPage />,
-        // loader: ({ params }) => getSomeData(params.id)
+        // loader: ({ params }) => (params.id)
       },
       {
         path: "/cocktails/:id",
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

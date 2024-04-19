@@ -1,28 +1,13 @@
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-family: var(--secondaryFont);
   padding: 1rem;
 }
 
-footer > img {
-  width: 6rem;
-  display: inline-block;
-}
-
-footer > ul {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-li > a {
+footer > a {
   color: var(--secondaryColorAlt);
-  align-items: center;
+  margin-left: 1rem;
   text-decoration: none;
 }
 
