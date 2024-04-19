@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/season/:id",
         element: <CategoryPage />,
-        // loader: ({ params }) => getSomeData(params.id)
+        // loader: ({ params }) => (params.id)
       },
       {
         path: "/cocktails/:id",

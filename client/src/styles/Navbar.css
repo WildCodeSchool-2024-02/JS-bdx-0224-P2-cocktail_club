@@ -61,6 +61,12 @@ button {
   left: 0;
 }
 
+.home-link > a {
+  color: var(--secondaryColorAlt);
+  font-family: --primaryFont;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
   nav {
     height: 6rem;

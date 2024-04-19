@@ -1,25 +1,13 @@
-import "../styles/Footer.css";
+import { Link } from "react-router-dom";
+import "../styles/footer.css";
 
 function Footer() {
   return (
     <footer>
-      <a href="#ancreToTheTop">
-        <img src="./src/assets/images/logo.svg" alt="logo cocktail club" />
-      </a>
-      <ul>
-        <li>
-          <a href="linkk">Summer</a>
-        </li>
-        <li>
-          <a href="link">Winter</a>
-        </li>
-        <li>
-          <a href="link">Autumn</a>
-        </li>
-        <li>
-          <a href="link">Spring</a>
-        </li>
-      </ul>
+      <Link to="/season/summer">Summer</Link>
+      <Link to="/season/winter">Winter</Link>
+      <Link to="/season/autumn">Autumn</Link>
+      <Link to="/season/spring">Spring</Link>
     </footer>
   );
 }
