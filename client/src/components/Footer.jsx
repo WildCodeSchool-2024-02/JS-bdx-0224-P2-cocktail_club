@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
-import "../styles/footer.css";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer>
-      <Link to="/season/summer">Summer</Link>
-      <Link to="/season/winter">Winter</Link>
-      <Link to="/season/autumn">Autumn</Link>
-      <Link to="/season/spring">Spring</Link>
+      <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
+      <ul>
+        <li><Link to="/season/summer">Summer</Link></li>
+        <li><Link to="/season/winter">Winter</Link></li>
+        <li><Link to="/season/autumn">Autumn</Link></li>
+        <li><Link to="/season/spring">Spring</Link></li>
+      </ul>
+      
+      
+     
+     
     </footer>
   );
 }
