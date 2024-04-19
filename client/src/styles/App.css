@@ -36,3 +36,7 @@ body {
   color: var(--textColor);
   font-family: var(--secondaryFont);
 }
+
+.pageWrapper {
+  min-height: 100vh;
+}
