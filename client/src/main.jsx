@@ -21,26 +21,33 @@ async function fetchCocktailsBySeason(ingredient) {
 }
 
 const getCocktails = (id) => {
+  let ingredient;
+  switch (id) {
+    case "summer":
+      ingredient = "Pineapple juice";
+      break;
+    case "autumn":
+      ingredient = "Blended whiskey";
+      break;
+    case "winter":
+      ingredient = "Kahlua";
+      break;
+    case "spring":
+      ingredient = "Sweet Vermouth";
+      break;
+    default:
+      ingredient = "";
+  }
 
-let ingredient;
-    switch (id) {
-      case "summer":
-        ingredient = "Pineapple juice";
-        break;
-      case "autumn":
-        ingredient = "Blended whiskey";
-        break;
-      case "winter":
-        ingredient = "Kahlua";
-        break;
-      case "spring":
-        ingredient = "Sweet Vermouth";
-        break;
-      default:
-        ingredient = "";
-    }
+  return fetchCocktailsBySeason(ingredient);
+};
 
-    return fetchCocktailsBySeason(ingredient);
+async function allCocktails() {
+  const response = await fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Pineapple_juice&i=Blended_whiskey&i=Kahlua&i=Sweet_Vermouth"
+  );
+  const data = await response.json();
+  return data.drinks.slice(0, 40);
 }
 
 const router = createBrowserRouter([
@@ -59,6 +66,11 @@ const router = createBrowserRouter([
       {
         path: "/cocktails/:id",
         element: <CocktailPage />,
+      },
+      {
+        path: "/allCocktails",
+        element: <CategoryPage />,
+        loader: () => allCocktails(),
       },
     ],
   },
