@@ -1,5 +1,5 @@
 function CocktailPage() {
-  return <p>dsfh</p>;
+  return <p>Cocktail Page</p>;
 }
 
 export default CocktailPage;
