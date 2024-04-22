@@ -21,27 +21,26 @@ async function fetchCocktailsBySeason(ingredient) {
 }
 
 const getCocktails = (id) => {
+  let ingredient;
+  switch (id) {
+    case "summer":
+      ingredient = "Pineapple juice";
+      break;
+    case "autumn":
+      ingredient = "Blended whiskey";
+      break;
+    case "winter":
+      ingredient = "Kahlua";
+      break;
+    case "spring":
+      ingredient = "Sweet Vermouth";
+      break;
+    default:
+      ingredient = "";
+  }
 
-let ingredient;
-    switch (id) {
-      case "summer":
-        ingredient = "Pineapple juice";
-        break;
-      case "autumn":
-        ingredient = "Blended whiskey";
-        break;
-      case "winter":
-        ingredient = "Kahlua";
-        break;
-      case "spring":
-        ingredient = "Sweet Vermouth";
-        break;
-      default:
-        ingredient = "";
-    }
-
-    return fetchCocktailsBySeason(ingredient);
-}
+  return fetchCocktailsBySeason(ingredient);
+};
 
 const router = createBrowserRouter([
   {
