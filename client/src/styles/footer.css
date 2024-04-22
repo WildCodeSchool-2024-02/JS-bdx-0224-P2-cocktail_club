@@ -16,6 +16,7 @@ footer > ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 

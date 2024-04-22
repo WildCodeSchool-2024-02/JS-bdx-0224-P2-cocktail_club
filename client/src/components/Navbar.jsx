@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
@@ -14,7 +15,9 @@ function Navbar() {
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>Surprise cocktail</li>
         <li>All our club cocktails</li>
-        <li>Back home</li>
+        <li>
+          <Link to="/">Back to Home</Link>
+        </li>
       </ul>
     </nav>
   );

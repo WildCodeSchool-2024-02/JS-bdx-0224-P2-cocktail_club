@@ -1,4 +1,4 @@
-import SeasonCard from "./SeasonCard";
+import SeasonCard from "../components/SeasonCard";
 
 function HomePage() {
   return (

@@ -1,4 +1,5 @@
 import "../styles/SectionAllCocktails.css";
+import OrangeLink from "./OrangeLink";
 
 function SectionAllCocktails() {
   return (
@@ -9,9 +10,10 @@ function SectionAllCocktails() {
       />
       <h2>All of Cocktail Club</h2>
       <p>erbtrngyfgvshtrgvj,ngfnbfdhnf,ghfgvghdg,fgnhfa</p>
-      <div className="buttonBorder">
-        <button type="button">Find your Drink !</button>
-      </div>
+      <OrangeLink 
+      name="Check all Cocktails" 
+      path="allCocktails"
+      />
     </section>
   );
 }

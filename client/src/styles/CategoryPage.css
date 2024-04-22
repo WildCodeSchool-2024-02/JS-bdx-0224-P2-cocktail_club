@@ -1,4 +1,4 @@
-main {
+.categoryPage {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@ main {
 }
 
 @media screen and (min-width: 992px) {
-  main {
+  .categoryPage {
     padding: 6.5rem 3rem 2rem 3rem;
   }
 }

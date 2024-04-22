@@ -23,7 +23,9 @@ h1 {
 }
 
 button {
-  width: 5rem;
+  display: flex;
+  justify-content: end;
+  width: 50px;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
   font-size: 3rem;
@@ -50,6 +52,8 @@ button {
   text-align: center;
 }
 .burger-menu.active {
+  position: absolute;
+  left: 0;
   opacity: 1;
   transform: translateY(0);
   z-index: 100;
