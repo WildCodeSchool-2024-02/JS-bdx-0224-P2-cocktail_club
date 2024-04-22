@@ -61,6 +61,12 @@ button {
   left: 0;
 }
 
+.burger-menu > li > a {
+  color: var(--secondaryColorAlt);
+  font-family: var(--secondaryFont);
+  text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
   nav {
     height: 6rem;

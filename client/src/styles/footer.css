@@ -5,24 +5,17 @@ footer {
   padding: 1rem;
 }
 
-footer > img {
-  width: 6rem;
-  display: inline-block;
-}
-
 footer > ul {
-  list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
-li > a {
+footer > ul > li > a {
   color: var(--secondaryColorAlt);
-  align-items: center;
   text-decoration: none;
 }
 

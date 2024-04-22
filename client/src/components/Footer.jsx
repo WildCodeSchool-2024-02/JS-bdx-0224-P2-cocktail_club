@@ -1,23 +1,22 @@
+import { Link } from "react-router-dom";
 import "../styles/footer.css";
 
 function Footer() {
   return (
     <footer>
-      <a href="#ancreToTheTop">
-        <img src="./src/assets/images/logo.svg" alt="logo cocktail club" />
-      </a>
+      <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
       <ul>
         <li>
-          <a href="link">Summer</a>
+          <Link to="/season/summer">Summer</Link>
         </li>
         <li>
-          <a href="link">Winter</a>
+          <Link to="/season/winter">Winter</Link>
         </li>
         <li>
-          <a href="link">Autumn</a>
+          <Link to="/season/autumn">Autumn</Link>
         </li>
         <li>
-          <a href="link">Spring</a>
+          <Link to="/season/spring">Spring</Link>
         </li>
       </ul>
     </footer>

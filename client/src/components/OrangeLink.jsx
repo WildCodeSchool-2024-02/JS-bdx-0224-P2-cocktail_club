@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 function OrangeLink({ name, path, classname }) {
   return (
-    <Link
-      to={path}
-      className={classname}
-    >
+    <Link to={path} className={classname}>
       {name}
     </Link>
   );
