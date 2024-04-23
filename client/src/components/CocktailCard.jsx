@@ -13,7 +13,7 @@ function CocktailCard({ drink }) {
       <h2 className="cocktailTitle">{strDrink}</h2>
       <p>{strInstructions}</p>
       <OrangeLink
-        name={strDrink}
+        name="Check Recipe"
         path={`cocktails/${idDrink}`}
         classname={styles.orangeButton}
       />

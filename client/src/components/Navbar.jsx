@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
@@ -15,8 +17,12 @@ function Navbar() {
         {menuState ? "x" : "≡"}
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
-        <li>Surprise cocktail</li>
-        <li>All our club cocktails</li>
+        <li>
+          <HashLink to="/#surpriseCocktail">Surprise cocktail</HashLink>
+        </li>
+        <li>
+          <HashLink to="/#allCocktails">All our club cocktails</HashLink>
+        </li>
         <li className="home-link">
           <Link to="/">Home Page</Link>
         </li>
