@@ -1,5 +1,6 @@
 import "../styles/SectionAllCocktails.css";
 import OrangeLink from "./OrangeLink";
+import styles from "../styles/OrangeLink.module.css";
 
 function SectionAllCocktails() {
   return (
@@ -9,8 +10,12 @@ function SectionAllCocktails() {
         alt="A plate with many cocktails of different colors"
       />
       <h2>All of Cocktail Club</h2>
-      <p>erbtrngyfgvshtrgvj,ngfnbfdhnf,ghfgvghdg,fgnhfa</p>
-      <OrangeLink name="Check all Cocktails" path="allCocktails" />
+      <p>Discover all the beverages from Cocktail Club</p>
+      <OrangeLink
+        name="Check all Cocktails"
+        path="allCocktails"
+        classname={styles.orangeButton}
+      />
     </section>
   );
 }

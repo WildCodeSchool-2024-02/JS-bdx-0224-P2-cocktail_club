@@ -1,4 +1,5 @@
 import SeasonCard from "../components/SeasonCard";
+import SectionAllCocktails from "../components/SectionAllCocktails";
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
         <SeasonCard season="Autumn" />
         <SeasonCard season="Winter" />
       </section>
+      <SectionAllCocktails />
     </main>
   );
 }

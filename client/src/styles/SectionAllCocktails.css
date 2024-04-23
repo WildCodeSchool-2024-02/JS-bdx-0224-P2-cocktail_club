@@ -4,15 +4,15 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 0 0 2rem 0;
 }
 
 h2 {
-  color: green;
+  color: var(--secondaryColorAlt);
 }
 
 .allCocktailsSection > img {
-  width: clamp(260px, 100%, 700px);
-  border-radius: 15px;
+  width: clamp(260px, 100%, 768px);
 }
 
 img:hover {
@@ -22,4 +22,14 @@ img:hover {
 
 .buttonBorder {
   border: 3px solid var(--textColor);
+}
+
+@media screen and (min-width: 768px) {
+  .allCocktailsSection > img {
+    border-radius: 15px;
+  }
+
+  .allCocktailsSection {
+    padding: 3rem 0;
+  }
 }
