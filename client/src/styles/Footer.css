@@ -1,13 +1,21 @@
 footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: var(--secondaryFont);
   padding: 1rem;
 }
 
-footer > a {
+footer > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+footer > ul > li > a {
   color: var(--secondaryColorAlt);
-  margin-left: 1rem;
   text-decoration: none;
 }
 
