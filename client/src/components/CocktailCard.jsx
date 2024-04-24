@@ -5,16 +5,15 @@ import "../styles/SeasonCard.css";
 import styles from "../styles/OrangeLink.module.css";
 
 function CocktailCard({ drink }) {
-  const { strDrink, strDrinkThumb, strInstructions, idDrink } = drink;
+  const { strDrink, strDrinkThumb, idDrink } = drink;
 
   return (
     <article className="cocktailCard">
       <img src={strDrinkThumb} alt={strDrink} />
       <h2 className="cocktailTitle">{strDrink}</h2>
-      <p>{strInstructions}</p>
       <OrangeLink
-        name={strDrink}
-        path={`cocktails/${idDrink}`}
+        name="Show Recipes"
+        path={`/cocktails/${idDrink}`}
         classname={styles.orangeButton}
       />
     </article>

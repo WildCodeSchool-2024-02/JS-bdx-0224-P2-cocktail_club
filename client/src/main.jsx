@@ -20,7 +20,7 @@ async function fetchCocktailsBySeason(ingredient) {
   return data.drinks.slice(0, 10);
 }
 
-const getCocktails = (id) => {
+const getCocktailsBySeasons = (id) => {
   let ingredient;
   switch (id) {
     case "summer":
@@ -64,6 +64,14 @@ const allCocktails = async () => {
   }
 };
 
+const getCocktailById = async (cocktailId) => {
+  const response = await fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`
+  );
+  const data = await response.json();
+  return data.drinks[0];
+};
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -75,11 +83,12 @@ const router = createBrowserRouter([
       {
         path: "/season/:id",
         element: <CategoryPage />,
-        loader: ({ params }) => getCocktails(params.id),
+        loader: ({ params }) => getCocktailsBySeasons(params.id),
       },
       {
         path: "/cocktails/:id",
         element: <CocktailPage />,
+        loader: ({ params }) => getCocktailById(params.id),
       },
       {
         path: "/allCocktails",

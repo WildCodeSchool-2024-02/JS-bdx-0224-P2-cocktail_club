@@ -16,7 +16,9 @@ function Navbar() {
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>Surprise cocktail</li>
-        <li>All our club cocktails</li>
+        <li className="all-cocktails">
+          <Link to="/allCocktails">All Cocktails</Link>
+        </li>
         <li className="home-link">
           <Link to="/">Home Page</Link>
         </li>
