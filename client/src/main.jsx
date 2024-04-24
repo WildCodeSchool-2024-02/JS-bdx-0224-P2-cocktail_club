@@ -42,27 +42,13 @@ const getCocktails = (id) => {
   return fetchCocktailsBySeason(ingredient);
 };
 
-const allCocktails = async () => {
-  try {
-    const response = await Promise.all([
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Pineapple_juice"
-      ),
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Blended_whiskey"
-      ),
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Kahlua"),
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Sweet_Vermouth"
-      ),
-    ]);
-    const datas = await Promise.all(response.map((r) => r.json()));
-    const cocktailList = datas.map((data) => data.drinks.slice(0, 12)).flat();
-    return cocktailList;
-  } catch {
-    throw Error("Promise failed");
-  }
-};
+function allCocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
 
 const router = createBrowserRouter([
   {
