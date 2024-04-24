@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
-import HashLink from "react-router-hash-link"
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
