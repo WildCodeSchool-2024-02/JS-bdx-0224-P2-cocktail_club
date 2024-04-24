@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function OrangeLink({ name, path, classname }) {
+function OrangeLink({ name, path, className }) {
   return (
-    <Link to={path} className={classname}>
+    <Link to={path} className={className}>
       {name}
     </Link>
   );
@@ -12,7 +12,7 @@ function OrangeLink({ name, path, classname }) {
 OrangeLink.propTypes = {
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  classname: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default OrangeLink;

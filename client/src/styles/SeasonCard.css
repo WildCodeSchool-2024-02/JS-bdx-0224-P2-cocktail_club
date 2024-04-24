@@ -64,6 +64,7 @@
   font-family: var(--primaryFont);
   color: var(--textColor);
   font-size: 1.5rem;
+  border: 3px solid rgba(103, 89, 89, 0);
 }
 
 .orange-button::before,
@@ -135,6 +136,10 @@
     font-size: 1.5rem;
   }
 
+  .orange-button:hover {
+    border: 3px solid var(--secondaryColorAlt);
+  }
+
   .orange-button::before,
   .orange-button::after {
     transition: all 0.3s ease;
@@ -145,6 +150,10 @@
   }
 
   .orange-button:hover::after {
+    opacity: 0;
+  }
+
+  .orange-button:hover::before {
     opacity: 0;
   }
 }

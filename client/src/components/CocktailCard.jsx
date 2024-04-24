@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import OrangeLink from "./OrangeLink";
 import "../styles/CocktailCard.css";
 import "../styles/SeasonCard.css";
-import styles from "../styles/OrangeLink.module.css";
+import "../styles/OrangeLink.css";
 
 function CocktailCard({ drink }) {
   const { strDrink, strDrinkThumb, strInstructions, idDrink } = drink;
@@ -15,7 +15,7 @@ function CocktailCard({ drink }) {
       <OrangeLink
         name="Check Recipe"
         path={`cocktails/${idDrink}`}
-        classname={styles.orangeButton}
+        className="orangeButton"
       />
     </article>
   );
