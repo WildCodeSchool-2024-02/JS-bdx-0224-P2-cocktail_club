@@ -86,6 +86,11 @@ const router = createBrowserRouter([
         element: <CategoryPage />,
         loader: () => allCocktails(),
       },
+      {
+        path: "/allCocktails",
+        element: <CategoryPage />,
+        loader: () => allCocktails(),
+      },
     ],
   },
 ]);
