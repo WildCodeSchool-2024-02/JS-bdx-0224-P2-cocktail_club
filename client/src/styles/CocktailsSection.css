@@ -1,0 +1,23 @@
+* {
+  border: 0;
+  margin: 0;
+}
+section > article {
+  padding: 2rem;
+}
+section > article > img {
+  width: 10rem;
+  clip-path: circle(50% at 50% 50%);
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    display: none;
+  }
+}
+
+section > article {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}

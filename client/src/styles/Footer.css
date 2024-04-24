@@ -4,7 +4,9 @@ footer {
   font-family: var(--secondaryFont);
   padding: 1rem;
 }
-
+footer > img {
+  width: 10rem;
+}
 footer > ul {
   display: flex;
   justify-content: space-between;
