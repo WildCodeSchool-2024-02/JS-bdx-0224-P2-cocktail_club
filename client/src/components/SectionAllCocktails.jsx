@@ -4,7 +4,7 @@ import styles from "../styles/OrangeLink.module.css";
 
 function SectionAllCocktails() {
   return (
-    <section className="allCocktailsSection">
+    <section className="allCocktailsSection" id="allCocktails">
       <img
         src="./src/assets/images/allcocktails.svg"
         alt="A plate with many cocktails of different colors"
