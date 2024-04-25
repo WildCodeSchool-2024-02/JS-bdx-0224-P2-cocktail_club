@@ -1,0 +1,54 @@
+.cocktailDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.cocktailDetails > img {
+  width: clamp(260px, 100%, 500px);
+  max-height: 400px;
+  border-radius: 15px;
+}
+
+.cocktailTitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.cocktailDetails > h3,
+.cocktailDetails > p,
+.cocktailDetails > ul {
+  text-align: center;
+  color: var(--textColor);
+  font-family: var(--secondaryFont);
+}
+
+.cocktailDetails > ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 992px) {
+  .cocktailDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 3px solid var(--secondaryColor);
+    border-radius: 15px;
+    padding: 2rem;
+    align-items: center;
+    margin: 10vh 30vh;
+  }
+
+  .cocktailTitle {
+    justify-items: start;
+  }
+
+  .cocktailDetails > img {
+    max-width: 60%;
+    border-radius: 15px;
+  }
+}

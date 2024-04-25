@@ -19,7 +19,7 @@
 }
 
 .card:first-of-type {
-  margin-top: 4.5rem;
+  margin-top: 1.5rem;
 }
 
 .card::before {
@@ -63,6 +63,7 @@
   font-family: var(--primaryFont);
   color: var(--textColor);
   font-size: 1.5rem;
+  border: 3px solid transparent;
 }
 
 .orange-button::before,
@@ -134,6 +135,10 @@
     font-size: 1.5rem;
   }
 
+  .orange-button:hover {
+    border: 3px solid var(--secondaryColorAlt);
+  }
+
   .orange-button::before,
   .orange-button::after {
     transition: all 0.3s ease;
@@ -144,6 +149,10 @@
   }
 
   .orange-button:hover::after {
+    opacity: 0;
+  }
+
+  .orange-button:hover::before {
     opacity: 0;
   }
 }

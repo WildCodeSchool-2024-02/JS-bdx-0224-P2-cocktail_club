@@ -7,16 +7,16 @@ function Footer() {
       <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
       <ul>
         <li>
-          <Link to="/season/summer">Summer</Link>
+          <Link to="/season/spring">Spring</Link>
         </li>
         <li>
-          <Link to="/season/winter">Winter</Link>
+          <Link to="/season/summer">Summer</Link>
         </li>
         <li>
           <Link to="/season/autumn">Autumn</Link>
         </li>
         <li>
-          <Link to="/season/spring">Spring</Link>
+          <Link to="/season/winter">Winter</Link>
         </li>
       </ul>
     </footer>
