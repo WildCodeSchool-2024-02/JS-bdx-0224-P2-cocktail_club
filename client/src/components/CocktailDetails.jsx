@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import "../styles/CocktailDetails.css";
 
 function CocktailDetails({ cocktail }) {
   const {
@@ -18,9 +17,9 @@ function CocktailDetails({ cocktail }) {
         <h2 className="cocktailTitle">{strDrink}</h2>
         <h3>Ingredients :</h3>
         <ul>
-          <li>{strIngredient1}</li>
-          <li>{strIngredient2}</li>
-          <li>{strIngredient3}</li>
+          <li>{`- ${strIngredient1}`}</li>
+          <li>{`- ${strIngredient2}`}</li>
+          <li>{`- ${strIngredient3}`}</li>
         </ul>
         <h3>Instructions :</h3>
         <p>{strInstructions}</p>

@@ -8,6 +8,7 @@ nav {
   padding: 0 1rem;
   background-color: var(--primaryColor);
   z-index: 100;
+  position: fixed;
 }
 
 img {
