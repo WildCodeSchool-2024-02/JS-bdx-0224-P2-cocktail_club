@@ -1,10 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import CocktailDetails from "../components/CocktailDetails";
+import "../styles/CocktailPage.css";
 
 function CocktailPage() {
   const cocktail = useLoaderData();
 
   return (
-    <main>
+    <main className="cocktailPage">
       <h2>{cocktail.strDrink}</h2>
       <img src={cocktail.strDrinkThumb} alt="random cocktail" />
       <p>{cocktail.strInstructions}</p>
@@ -14,6 +16,7 @@ function CocktailPage() {
         <li>Ingredients 3:{cocktail.strIngredient3}</li>
         <li>Ingredients 4:{cocktail.strIngredient4}</li>
       </ul>
+      <CocktailDetails cocktail={cocktail} key={cocktail.idDrink} />
     </main>
   );
 }

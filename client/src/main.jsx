@@ -7,22 +7,24 @@ import Home from "./pages/HomePage";
 import CocktailPage from "./pages/CocktailPage";
 import CategoryPage from "./pages/CategoryPage";
 
-async function fetchCocktailsBySeason(ingredient) {
-  const response = await fetch(
+// router creation
+
+function fetchCocktailsBySeason(ingredient) {
+  return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
-  );
-  const data = await response.json();
-  return data.drinks;
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks.slice(0, 12));
 }
 
-const getCocktails = (id) => {
+const getCocktailsBySeasons = (id) => {
   let ingredient;
   switch (id) {
     case "summer":
       ingredient = "Pineapple juice";
       break;
     case "autumn":
-      ingredient = "Blended whiskey";
+      ingredient = "Gin";
       break;
     case "winter":
       ingredient = "Kahlua";
@@ -59,7 +61,15 @@ function getRandomCocktail() {
     .then((data) => data.drinks[0]);
 }
 
-function getMocktails() {
+function getCocktailById(cocktailId) {
+  return fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks[0]);
+}
+
+function mocktails() {
   return fetch(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
   )
@@ -78,11 +88,12 @@ const router = createBrowserRouter([
       {
         path: "/season/:id",
         element: <CategoryPage />,
-        loader: ({ params }) => getCocktails(params.id),
+        loader: ({ params }) => getCocktailsBySeasons(params.id),
       },
       {
         path: "/cocktails/:id",
         element: <CocktailPage />,
+        loader: ({ params }) => getCocktailById(params.id),
       },
       {
         path: "/popularcocktails",
@@ -95,14 +106,14 @@ const router = createBrowserRouter([
         loader: () => getRandomCocktail(),
       },
       {
-        path: "/mocktails",
-        element: <CategoryPage />,
-        loader: () => getMocktails(),
-      },
-      {
         path: "/allCocktails",
         element: <CategoryPage />,
         loader: () => allCocktails(),
+      },
+      {
+        path: "/mocktails",
+        element: <CategoryPage />,
+        loader: () => mocktails(),
       },
     ],
   },

@@ -7,16 +7,17 @@ footer {
 }
 footer > img {
   width: 5rem;
-  scroll-behavior: smooth;
+  display: inline-block;
 }
+
 footer > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
   list-style-type: none;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 li > a {

@@ -11,11 +11,11 @@ h2 {
   color: var(--secondaryColorAlt);
 }
 
-.allCocktailsSection > img {
+.allCocktailImg {
   width: clamp(260px, 100%, 768px);
 }
 
-img:hover {
+.allCocktailImg:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -25,7 +25,7 @@ img:hover {
 }
 
 @media screen and (min-width: 768px) {
-  .allCocktailsSection > img {
+  .allCocktailImg {
     border-radius: 15px;
   }
   .allCocktailsSection {

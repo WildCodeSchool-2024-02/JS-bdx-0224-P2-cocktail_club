@@ -10,11 +10,11 @@ function CocktailCard({ drink }) {
   return (
     <article className="cocktailCard">
       <img src={strDrinkThumb} alt={strDrink} />
-      <h2 className="cocktailTitle">{strDrink}</h2>
+      <h2 className="cocktailCardTitle">{strDrink}</h2>
       <p>{strInstructions}</p>
       <OrangeLink
         name="Check Recipe"
-        path={`cocktails/${idDrink}`}
+        path={`/cocktails/${idDrink}`}
         className="orangeButton"
       />
     </article>
