@@ -17,13 +17,13 @@ function Navbar() {
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>
-          <HashLink to="/#surpriseCocktail">Surprise Cocktails</HashLink>
+          <HashLink to="/#randomCocktail">Surprise Cocktails</HashLink>
+        </li>
+        <li className="home-link">
+          <HashLink to="/#mocktails">Mocktails</HashLink>
         </li>
         <li>
           <HashLink to="/#allCocktails">All Cocktails</HashLink>
-        </li>
-        <li className="home-link">
-          <Link to="/">Mocktails</Link>
         </li>
       </ul>
     </nav>

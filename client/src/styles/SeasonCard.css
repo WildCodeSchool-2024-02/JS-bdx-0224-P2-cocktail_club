@@ -88,12 +88,12 @@
 @media screen and (min-width: 992px) {
   .season-section {
     flex-direction: row;
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   .card {
     position: relative;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 5rem);
     min-width: 33vw;
     width: 100%;
   }

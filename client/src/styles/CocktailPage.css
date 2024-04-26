@@ -23,7 +23,7 @@
 
 .cocktailDetails > img {
   width: clamp(250px, 100%, 500px);
-  max-height: 400px;
+  max-height: 350px;
   border-radius: 15px;
   justify-self: center;
 }

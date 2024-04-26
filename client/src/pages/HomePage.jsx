@@ -19,7 +19,7 @@ function HomePage() {
         path="popularcocktails"
       />
       <CocktailsSection
-        idName="random"
+        idName="randomCocktail"
         source="./src/assets/images/winter5.webp"
         title="RANDOM COCKTAIL"
         content="Experience the thrill of surprise with our random cocktail selection. Each sip unveils a new adventure, from exotic concoctions to unexpected flavor combinations. Let your taste buds wander and discover exciting blends that promise to intrigue and delight."
@@ -27,7 +27,7 @@ function HomePage() {
         isReverse
       />
       <CocktailsSection
-        idName="mocktail"
+        idName="mocktails"
         source="./src/assets/images/mocktail.webp"
         title="MOCKTAILS"
         content="Dive into the tantalizing realm of non-alcoholic cocktails, where every sip is a burst of flavor and creativity. From fruity mocktails to sophisticated alcohol-free blends, indulge in refreshing beverages crafted to perfection, offering a delightful experience for every palate"

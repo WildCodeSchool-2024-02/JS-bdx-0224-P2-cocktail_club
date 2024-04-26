@@ -40,7 +40,7 @@ button {
   width: 100%;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ button {
 
 @media screen and (min-width: 992px) {
   nav {
-    height: 6rem;
+    height: 5rem;
     padding: 0 3rem;
   }
 
@@ -80,6 +80,7 @@ button {
   .burger-menu {
     position: static;
     height: 100%;
+    max-height: 4rem;
     width: auto;
     flex-direction: row;
     justify-content: space-between;

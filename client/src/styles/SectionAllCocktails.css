@@ -13,6 +13,12 @@ h2 {
 
 .allCocktailImg {
   width: clamp(260px, 100%, 768px);
+  max-height: 350px;
+}
+
+.allCocktailImg > img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .allCocktailImg:hover {
@@ -26,9 +32,9 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .allCocktailImg {
-    border-radius: 15px;
+    border-radius: 20px;
   }
   .allCocktailsSection {
-    padding: 3rem 0;
+    padding: 6rem 0 2rem 0;
   }
 }
