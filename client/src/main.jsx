@@ -12,7 +12,7 @@ async function fetchCocktailsBySeason(ingredient) {
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
   );
   const data = await response.json();
-  return data.drinks
+  return data.drinks;
 }
 
 const getCocktails = (id) => {
@@ -37,35 +37,35 @@ const getCocktails = (id) => {
   return fetchCocktailsBySeason(ingredient);
 };
 
-const allCocktails = async () => {
-  try {
-    const response = await Promise.all([
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Pineapple_juice"
-      ),
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Blended_whiskey"
-      ),
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Kahlua"),
-      fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Sweet_Vermouth"
-      ),
-    ]);
-    const datas = await Promise.all(response.map((r) => r.json()));
-    const cocktailList = datas.map((data) => data.drinks.slice(0, 12)).flat();
-    return cocktailList;
-  } catch {
-    throw Error("Promise failed");
-  }
-};
+function allCocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
+
+function getPopularCocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
 
 function getRandomCocktail() {
   return fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-      .then((response) => response.json())
-      .then((data) => data.drinks[0])
-    }
+    .then((response) => response.json())
+    .then((data) => data.drinks[0]);
+}
 
-    
+function getMocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
 
 const router = createBrowserRouter([
   {
@@ -85,12 +85,22 @@ const router = createBrowserRouter([
         element: <CocktailPage />,
       },
       {
+        path: "/popularcocktails",
+        element: <CategoryPage />,
+        loader: () => getPopularCocktails(),
+      },
+      {
         path: "/randomcocktail",
         element: <CocktailPage />,
         loader: () => getRandomCocktail(),
       },
       {
-        path: "/allcocktails",
+        path: "/mocktails",
+        element: <CategoryPage />,
+        loader: () => getMocktails(),
+      },
+      {
+        path: "/allCocktails",
         element: <CategoryPage />,
         loader: () => allCocktails(),
       },

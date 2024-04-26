@@ -9,14 +9,13 @@ function CocktailPage() {
       <img src={cocktail.strDrinkThumb} alt="random cocktail" />
       <p>{cocktail.strInstructions}</p>
       <ul>
-      <li>Ingredients 1:{cocktail.strIngredient1}</li>
-      <li>Ingredients 2:{cocktail.strIngredient2}</li>
-      <li>Ingredients 3:{cocktail.strIngredient3}</li>
-      <li>Ingredients 4:{cocktail.strIngredient4}</li>
+        <li>Ingredients 1:{cocktail.strIngredient1}</li>
+        <li>Ingredients 2:{cocktail.strIngredient2}</li>
+        <li>Ingredients 3:{cocktail.strIngredient3}</li>
+        <li>Ingredients 4:{cocktail.strIngredient4}</li>
       </ul>
-      </main>
-    
+    </main>
   );
 }
 
-export default CocktailPage
+export default CocktailPage;

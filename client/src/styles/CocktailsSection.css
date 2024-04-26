@@ -1,23 +1,51 @@
-* {
-  border: 0;
-  margin: 0;
-}
-section > article {
-  padding: 2rem;
-}
-section > article > img {
-  width: 10rem;
+.cocktailSection > img {
+  width: 13rem;
   clip-path: circle(50% at 50% 50%);
+  justify-self: center;
+}
+.cocktailSection {
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+.cocktailSection > p {
+  display: none;
+}
+.cocktailSection {
+  border: 1px;
+  margin-bottom: 2rem;
+  gap: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-  p {
-    display: none;
+@media screen and (min-width: 992px) {
+  .cocktailSection {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
-}
 
-section > article {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  .cocktailSection > img {
+    grid-row: 1/4;
+    width: 20rem;
+    justify-self: flex-start;
+  }
+  .cocktailSection > h2 {
+    grid-row: 1/2;
+    justify-self: flex-start;
+  }
+  .cocktailSection > p {
+    display: block;
+    grid-row: 2/3;
+  }
+  .cocktailSection > .orangeButton {
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .cocktailSection > .isReverse {
+    grid-column: 2/3;
+    justify-self: flex-end;
+  }
 }

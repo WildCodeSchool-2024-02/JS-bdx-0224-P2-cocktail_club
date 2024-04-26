@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
 
   return (
-    <nav>
+    <nav id="navbar">
       <Link to="/">
         <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
       </Link>
@@ -15,10 +16,14 @@ function Navbar() {
         {menuState ? "x" : "≡"}
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
-        <li>Surprise cocktail</li>
-        <li>All our club cocktails</li>
-        <li className="home-link">
-          <Link to="/">Home Page</Link>
+        <li className="mocktail-link">
+          <Link to="/mocktail">Mocktail</Link>
+        </li>
+        <li className="random-link">
+          <Link to="/randomCocktail">Surprise cocktail</Link>
+        </li>
+        <li>
+          <HashLink to="/#allCocktails">All our club cocktails</HashLink>
         </li>
       </ul>
     </nav>

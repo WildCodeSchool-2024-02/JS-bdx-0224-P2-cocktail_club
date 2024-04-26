@@ -1,10 +1,10 @@
 import "../styles/SectionAllCocktails.css";
 import OrangeLink from "./OrangeLink";
-import styles from "../styles/OrangeLink.module.css";
+import "../styles/OrangeLink.css";
 
 function SectionAllCocktails() {
   return (
-    <section className="allCocktailsSection">
+    <section className="allCocktailsSection" id="allCocktails">
       <img
         src="./src/assets/images/allcocktails.svg"
         alt="A plate with many cocktails of different colors"
@@ -14,7 +14,7 @@ function SectionAllCocktails() {
       <OrangeLink
         name="Check all Cocktails"
         path="allCocktails"
-        classname={styles.orangeButton}
+        className="orangeButton"
       />
     </section>
   );
