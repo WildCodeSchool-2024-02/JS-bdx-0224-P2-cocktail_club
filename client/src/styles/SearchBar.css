@@ -1,0 +1,25 @@
+.SearchBar {
+  grid-column: 1 / -1;
+  justify-self: center;
+  border: 3px solid var(--secondaryColor);
+  padding: 1px;
+  border-radius: 8px;
+}
+
+.SearchBar-label {
+  font-size: 0;
+  color: var(--secondaryColor);
+}
+
+.SearchBar-input {
+  background-color: var(--primaryColor);
+  border: none;
+  font: var(--primaryFont);
+  color: var(--textColor);
+  outline-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+.SearchBar-input:focus {
+  background-color: var(--textColor);
+}

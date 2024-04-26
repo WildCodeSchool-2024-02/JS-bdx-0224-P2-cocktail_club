@@ -17,7 +17,7 @@ async function fetchCocktailsBySeason(ingredient) {
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
   );
   const data = await response.json();
-  return data.drinks.slice(0, 10);
+  return data.drinks.slice(0, 12);
 }
 
 const getCocktails = (id) => {
@@ -50,6 +50,12 @@ function allCocktails() {
     .then((data) => data.drinks);
 }
 
+function mocktails() {
+  return fetch("www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
+  .then ((response) => response.json())
+  .then ((data) => data.drinks);  
+}
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -73,10 +79,10 @@ const router = createBrowserRouter([
         loader: () => allCocktails(),
       },
       {
-        path: "/allCocktails",
+        path: "/mocktails",
         element: <CategoryPage />,
-        loader: () => allCocktails(),
-      },
+        loader: () => mocktails(),
+      }
     ],
   },
 ]);
