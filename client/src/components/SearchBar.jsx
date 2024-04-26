@@ -1,37 +1,36 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
+import "../styles/SearchBar.css";
 
-function SearchBar(cocktails) {
-  // 0 - créer un usteSTate
-  // 1 - créer l'input
-  // 2 - on évoute le "onchange" sur l'input
-  // 3 - quand la valeur de mon input change : mettre à jorla valeur useState
-  // 4 - Je créé un useEffect
-  // 5- dans ce useeffect : j'envoie un fetch avec le endpoint "Search cocktail by name"
-  // 6- mon useEffect a comme dépendance : le useState
-
-  // const [cocktailName, setCocktailName] = useState("");
-  const [cocktailList, setCocktailList] = useState([]);
-
-  const handleChange = (event) => {
-    console.info("change");
-    console.info(cocktailList);
-    const { value } = event.target;
-    if (value === "") {
-      setCocktailList(cocktails);
-    } else {
-      // eslint-disable-next-line react/destructuring-assignment
-      const filteredCocktail = cocktails.filter((cocktail) =>
-        cocktail.strDrink.toLowerCase().includes(value.toLowerCase())
-      );
-      setCocktailList(filteredCocktail);
+function SearchBar({ initialCocktailList, setCocktails }) {
+  const handleSubmit = (event) => event.preventDefault();
+  function handleChange(event) {
+    const searchValue = event.target.value.toLowerCase();
+    if (searchValue === "") {
+      return setCocktails(initialCocktailList);
     }
-  };
+
+    const filteredCocktails = initialCocktailList.filter((cocktail) =>
+      cocktail.strDrink.toLowerCase().includes(searchValue)
+    );
+    setCocktails(filteredCocktails);
+
+    if (filteredCocktails.length === 0) {
+      fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setCocktails(data.drinks ? data.drinks : []);
+        });
+    }
+    return true;
+  }
 
   return (
-    <form>
+    <form className="SearchBar" onSubmit={handleSubmit}>
       <label htmlFor="searchCocktail" className="SearchBar-label">
         Search cocktail :
-      </label>{" "}
+      </label>
       <input
         id="searchCocktail"
         name="searchCocktail"
@@ -44,46 +43,9 @@ function SearchBar(cocktails) {
   );
 }
 
+SearchBar.propTypes = {
+  initialCocktailList: PropTypes.arrayOf.isRequired,
+  setCocktails: PropTypes.func.isRequired,
+};
+
 export default SearchBar;
-
-// import PropTypes from "prop-types";
-// import "../styles/SearchBar.css"
-
-// function SearchBar({ displayedCocktail, setDisplayedCocktail, cocktails }) {
-
-//   const handleSubmit = (event) => event.preventDefault();
-
-//   const handleChange = (event) => {
-//     const { value } = event.target;
-//     if (value === "") {
-//       setDisplayedCocktail(cocktails);
-//     } else {
-//       const filteredCocktail = displayedCocktail.filter((cocktail) =>
-//         cocktail.strDrink.toLowerCase().includes(value.toLowerCase())
-//       );
-//       setDisplayedCocktail(filteredCocktail);
-//     }
-//   };
-
-//   return (
-//     <form className="SearchBar" onSubmit={handleSubmit}>
-//       <label htmlFor="searchCocktail" className="SearchBar-label">Search cocktail :</label>
-//       <input
-//         id="searchCocktail"
-//         name="searchCocktail"
-//         type="search"
-//         placeholder="   Find your cocktail...      🔎"
-//         onChange={handleChange}
-//         className="SearchBar-input"
-//         />
-//     </form>
-//   );
-// }
-
-// SearchBar.propTypes = {
-//   displayedCocktail: PropTypes.arrayOf.isRequired,
-//   setDisplayedCocktail: PropTypes.func.isRequired,
-//   cocktails: PropTypes.arrayOf.isRequired,
-// };
-
-// export default SearchBar;
