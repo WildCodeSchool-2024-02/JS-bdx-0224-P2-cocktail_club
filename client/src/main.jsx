@@ -12,12 +12,12 @@ import CategoryPage from "./pages/CategoryPage";
 
 // router creation
 
-async function fetchCocktailsBySeason(ingredient) {
-  const response = await fetch(
+function fetchCocktailsBySeason(ingredient) {
+  return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
-  );
-  const data = await response.json();
-  return data.drinks.slice(0, 9);
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks.slice(0, 12));
 }
 
 const getCocktailsBySeasons = (id) => {
@@ -50,13 +50,21 @@ function allCocktails() {
     .then((data) => data.drinks);
 }
 
-const getCocktailById = async (cocktailId) => {
-  const response = await fetch(
+function getCocktailById(cocktailId) {
+  return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`
-  );
-  const data = await response.json();
-  return data.drinks[0];
-};
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks[0]);
+}
+
+function mocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
 
 const router = createBrowserRouter([
   {
@@ -80,6 +88,11 @@ const router = createBrowserRouter([
         path: "/allCocktails",
         element: <CategoryPage />,
         loader: () => allCocktails(),
+      },
+      {
+        path: "/mocktails",
+        element: <CategoryPage />,
+        loader: () => mocktails(),
       },
     ],
   },
