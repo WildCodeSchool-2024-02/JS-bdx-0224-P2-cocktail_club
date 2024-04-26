@@ -12,22 +12,22 @@ import CategoryPage from "./pages/CategoryPage";
 
 // router creation
 
-async function fetchCocktailsBySeason(ingredient) {
-  const response = await fetch(
+function fetchCocktailsBySeason(ingredient) {
+  return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
-  );
-  const data = await response.json();
-  return data.drinks.slice(0, 12);
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks.slice(0, 12));
 }
 
-const getCocktails = (id) => {
+const getCocktailsBySeasons = (id) => {
   let ingredient;
   switch (id) {
     case "summer":
       ingredient = "Pineapple juice";
       break;
     case "autumn":
-      ingredient = "Blended whiskey";
+      ingredient = "Gin";
       break;
     case "winter":
       ingredient = "Kahlua";
@@ -50,10 +50,20 @@ function allCocktails() {
     .then((data) => data.drinks);
 }
 
+function getCocktailById(cocktailId) {
+  return fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks[0]);
+}
+
 function mocktails() {
-  return fetch("www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
-  .then ((response) => response.json())
-  .then ((data) => data.drinks);  
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
 }
 
 const router = createBrowserRouter([
@@ -67,11 +77,12 @@ const router = createBrowserRouter([
       {
         path: "/season/:id",
         element: <CategoryPage />,
-        loader: ({ params }) => getCocktails(params.id),
+        loader: ({ params }) => getCocktailsBySeasons(params.id),
       },
       {
         path: "/cocktails/:id",
         element: <CocktailPage />,
+        loader: ({ params }) => getCocktailById(params.id),
       },
       {
         path: "/allCocktails",
@@ -82,7 +93,7 @@ const router = createBrowserRouter([
         path: "/mocktails",
         element: <CategoryPage />,
         loader: () => mocktails(),
-      }
+      },
     ],
   },
 ]);

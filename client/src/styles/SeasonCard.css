@@ -1,7 +1,6 @@
 .season-section {
   position: relative;
   left: 0;
-  padding-top: 4.5rem;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -20,7 +19,7 @@
 }
 
 .card:first-of-type {
-  margin-top: 4.5rem;
+  margin-top: 1.5rem;
 }
 
 .card::before {
