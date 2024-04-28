@@ -1,21 +1,18 @@
+.cocktailSection {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  border: 1px;
+  padding: 4rem 0 1rem 0;
+}
 .cocktailSection > img {
   width: 13rem;
   clip-path: circle(50% at 50% 50%);
   justify-self: center;
 }
-.cocktailSection {
-  padding: 2rem;
-  display: grid;
-  justify-items: center;
-  gap: 1.5rem;
-}
+
 .cocktailSection > p {
   display: none;
-}
-.cocktailSection {
-  border: 1px;
-  gap: 2rem;
-  padding: 4rem 0 1rem 0;
 }
 
 @media screen and (min-width: 992px) {

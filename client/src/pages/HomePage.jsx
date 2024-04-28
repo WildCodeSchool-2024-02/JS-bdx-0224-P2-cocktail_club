@@ -17,6 +17,7 @@ function HomePage() {
         title="POPULAR COCKTAILS"
         content="Embark on a journey through our selection of popular cocktails, where classic favorites meet innovative twists. From timeless classics like martinis to trendy creations like espresso martinis, discover the iconic flavors that have captivated cocktail enthusiasts worldwide."
         path="popularcocktails"
+        isNotReverse
       />
       <CocktailsSection
         idName="randomCocktail"
@@ -32,6 +33,7 @@ function HomePage() {
         title="MOCKTAILS"
         content="Dive into the tantalizing realm of non-alcoholic cocktails, where every sip is a burst of flavor and creativity. From fruity mocktails to sophisticated alcohol-free blends, indulge in refreshing beverages crafted to perfection, offering a delightful experience for every palate"
         path="mocktails"
+        isNotReverse
       />
       <SectionAllCocktails />
     </main>

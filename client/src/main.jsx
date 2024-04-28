@@ -6,8 +6,7 @@ import App from "./App";
 import Home from "./pages/HomePage";
 import CocktailPage from "./pages/CocktailPage";
 import CategoryPage from "./pages/CategoryPage";
-
-// router creation
+import ContactPage from "./pages/ContactPage";
 
 function fetchCocktailsBySeason(ingredient) {
   return fetch(
@@ -114,6 +113,11 @@ const router = createBrowserRouter([
         path: "/mocktails",
         element: <CategoryPage />,
         loader: () => mocktails(),
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+        
       },
     ],
   },

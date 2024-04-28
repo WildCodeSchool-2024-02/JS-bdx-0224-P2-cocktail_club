@@ -6,10 +6,11 @@ import "../styles/CocktailsSection.css";
 function CocktailsSection({ idName, source, title, content, path, isReverse }) {
   return (
     <section className="cocktailSection" id={idName}>
-      <img
+      <img 
         src={source}
         alt={`${title} cocktail`}
         className={isReverse ? "isReverse" : null}
+        id="idCocktailSection"
       />
       <h2>{title}</h2>
       <p>{content} </p>

@@ -9,7 +9,13 @@ footer > img {
   width: 5rem;
   display: inline-block;
 }
-
+.contact {
+  text-decoration: none;
+  color: var(--secondaryColorAlt);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 footer > ul {
   list-style-type: none;
   display: flex;
