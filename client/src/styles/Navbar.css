@@ -40,7 +40,7 @@ button {
   width: 100%;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
-  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   list-style: none;
   display: flex;
   flex-direction: column;

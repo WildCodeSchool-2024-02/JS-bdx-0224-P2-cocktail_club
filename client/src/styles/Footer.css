@@ -1,21 +1,27 @@
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   font-family: var(--secondaryFont);
   padding: 1rem;
-  gap: 1rem;
+  gap: 0.8rem;
 }
+
 footer > img {
   width: 5rem;
   display: inline-block;
 }
+
 .contact {
   text-decoration: none;
   color: var(--secondaryColorAlt);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s all;
 }
+
 footer > ul {
   list-style-type: none;
   display: flex;
@@ -32,8 +38,20 @@ li > a {
   text-decoration: none;
   transition: ease 0.3s;
 }
-li > a:hover {
+
+footer a:hover {
   opacity: 0.8;
+}
+
+footer > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  color: var(--secondaryColorAlt);
+  text-align: center;
 }
 
 @media screen and (min-width: 992px) {
