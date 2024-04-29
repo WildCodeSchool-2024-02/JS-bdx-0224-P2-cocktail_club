@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+import { HashLink } from "react-router-hash-link";
 
 function Footer() {
   return (
     <footer>
-      <a href="/">
+      <HashLink to="/#seasonClass">
         <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
-      </a>
+      </HashLink>
       <Link to="/contact" className="contact">
         Contact
       </Link>
