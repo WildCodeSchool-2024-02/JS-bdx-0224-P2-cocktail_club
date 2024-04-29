@@ -1,4 +1,5 @@
 footer {
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -7,6 +8,7 @@ footer {
   font-family: var(--secondaryFont);
   padding: 1rem;
   gap: 0.8rem;
+  margin: auto;
 }
 
 footer > img {

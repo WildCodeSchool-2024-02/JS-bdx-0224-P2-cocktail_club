@@ -6,6 +6,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 5.5rem 1rem 1rem 1rem;
+  max-width: 1200px;
 }
 
 @media screen and (min-width: 700px) {

@@ -11,6 +11,7 @@ function Navbar() {
   };
 
   return (
+    <header>
     <nav id="navbar">
       <Link to="/">
         <img src="./src/assets/images/logo.svg" alt="Logo Cocktail Club" />
@@ -42,6 +43,7 @@ function Navbar() {
         </li>
       </ul>
     </nav>
+    </header>
   );
 }
 

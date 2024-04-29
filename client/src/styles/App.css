@@ -43,4 +43,9 @@ body {
 
 main {
   min-height: calc(100vh - 4.5rem - 3rem);
+  margin: auto;
+}
+
+section {
+  margin: auto;
 }
