@@ -43,7 +43,7 @@ function allCocktails() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
   )
     .then((response) => response.json())
-    .then((data) => data.drinks);
+    .then((data) => data.drinks.slice(0, 30));
 }
 
 function getPopularCocktails() {
@@ -51,7 +51,7 @@ function getPopularCocktails() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink"
   )
     .then((response) => response.json())
-    .then((data) => data.drinks);
+    .then((data) => data.drinks.slice(0, 30));
 }
 
 function getRandomCocktail() {

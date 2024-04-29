@@ -19,6 +19,7 @@
   --secondaryColorAlt: #ee7e1b;
   --primaryFont: "Bebas Neue", sans-serif;
   --secondaryFont: "Pontano Sans", sans-serif;
+  --borderColor: grey;
 }
 
 * {
