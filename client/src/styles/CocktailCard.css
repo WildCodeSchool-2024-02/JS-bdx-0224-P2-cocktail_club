@@ -1,0 +1,25 @@
+.cocktailCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.cocktailCard > img {
+  width: clamp(260px, 100%, 500px);
+  max-height: 350px;
+  border-radius: 15px;
+}
+
+.cocktailCardTitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.cocktailCard > p {
+  text-align: center;
+}
