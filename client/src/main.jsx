@@ -48,7 +48,7 @@ function allCocktails() {
 
 function getPopularCocktails() {
   return fetch(
-    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink"
   )
     .then((response) => response.json())
     .then((data) => data.drinks);
@@ -68,7 +68,7 @@ function getCocktailById(cocktailId) {
     .then((data) => data.drinks[0]);
 }
 
-function mocktails() {
+function getMocktails() {
   return fetch(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
   )
@@ -112,7 +112,7 @@ const router = createBrowserRouter([
       {
         path: "/mocktails",
         element: <CategoryPage />,
-        loader: () => mocktails(),
+        loader: () => getMocktails(),
       },
       {
         path: "/contact",

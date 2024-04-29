@@ -5,7 +5,7 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     lastname: "",
     firstname: "",
-    mail: "",
+    email: "",
     message: "",
   });
 
@@ -34,7 +34,7 @@ function ContactForm() {
     setFormData({
       lastname: "",
       firstname: "",
-      mail: "",
+      email: "",
       message: "",
     });
   };
@@ -70,12 +70,12 @@ function ContactForm() {
             />
           </article>
           <article className="form-group">
-            <label htmlFor="mail">Mail:</label>
+            <label htmlFor="email">Email:</label>
             <input
               type="email"
-              id="mail"
-              name="mail"
-              value={formData.mail}
+              id="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
               required

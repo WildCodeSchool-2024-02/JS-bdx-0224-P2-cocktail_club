@@ -24,7 +24,6 @@ CocktailCard.propTypes = {
   drink: PropTypes.shape({
     strDrink: PropTypes.string.isRequired,
     strDrinkThumb: PropTypes.string.isRequired,
-    strInstructions: PropTypes.string,
     idDrink: PropTypes.string.isRequired,
   }).isRequired,
 };
