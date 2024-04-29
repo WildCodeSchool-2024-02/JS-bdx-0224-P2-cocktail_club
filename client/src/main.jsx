@@ -100,7 +100,7 @@ const router = createBrowserRouter([
         loader: () => getPopularCocktails(),
       },
       {
-        path: "/randomcocktail",
+        path: "/surprisecocktail",
         element: <CocktailPage />,
         loader: () => getRandomCocktail(),
       },
@@ -117,7 +117,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
-        
       },
     ],
   },
