@@ -12,7 +12,7 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 label {
@@ -22,11 +22,14 @@ label {
 input,
 textarea {
   width: 100%;
+  min-height: 50px;
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  font-family: var(--secondaryFont);
+  font-size: 1.1rem;
 }
 #message {
   height: 120px;
@@ -55,7 +58,8 @@ textarea {
   justify-content: center;
   align-items: center;
   animation: pulse 1.5s infinite;
+  font-size: 2rem;
 }
 .formButton:hover {
-  background-color: #de6d0f;
+  background-color: var(--secondaryColorAlt);
 }

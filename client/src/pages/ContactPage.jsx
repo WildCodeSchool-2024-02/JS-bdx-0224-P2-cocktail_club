@@ -11,10 +11,15 @@ function ContactForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name === "lastname" || name === "firstname") {
+    if (name === "lastname") {
       setFormData((prevState) => ({
         ...prevState,
-        [name]: value.slice(0, 30),
+        [name]: value.slice(0, 30).toUpperCase(),
+      }));
+    } else if (name === "firstname") {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value.slice(0, 30).charAt(0).toUpperCase() + value.slice(1),
       }));
     } else {
       setFormData((prevState) => ({

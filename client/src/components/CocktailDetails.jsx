@@ -10,6 +10,10 @@ function CocktailDetails({ cocktail }) {
     strIngredient3,
   } = cocktail;
 
+  const ingredients = [strIngredient1, strIngredient2, strIngredient3].filter(
+    (ingredient) => ingredient !== null && ingredient.trim() !== ""
+  );
+
   return (
     <section className="cocktailDetails">
       <img src={strDrinkThumb} alt={strDrink} />
@@ -17,9 +21,9 @@ function CocktailDetails({ cocktail }) {
         <h2 className="cocktailTitle">{strDrink}</h2>
         <h3>Ingredients :</h3>
         <ul>
-          <li>{`- ${strIngredient1}`}</li>
-          <li>{`- ${strIngredient2}`}</li>
-          <li>{`- ${strIngredient3}`}</li>
+          {ingredients.map((ingredient) => (
+            <li key={ingredient}>{`- ${ingredient}`}</li>
+          ))}
         </ul>
         <h3>Instructions :</h3>
         <p>{strInstructions}</p>
@@ -33,9 +37,9 @@ CocktailDetails.propTypes = {
     strDrink: PropTypes.string.isRequired,
     strDrinkThumb: PropTypes.string.isRequired,
     strInstructions: PropTypes.string.isRequired,
-    strIngredient1: PropTypes.string.isRequired,
-    strIngredient2: PropTypes.string.isRequired,
-    strIngredient3: PropTypes.string.isRequired,
+    strIngredient1: PropTypes.string,
+    strIngredient2: PropTypes.string,
+    strIngredient3: PropTypes.string,
   }).isRequired,
 };
 

@@ -6,6 +6,10 @@ import { HashLink } from "react-router-hash-link";
 function Navbar() {
   const [menuState, setMenuState] = useState(false);
 
+  const closeMenu = () => {
+    setMenuState(false);
+  };
+
   return (
     <nav id="navbar">
       <Link to="/">
@@ -17,13 +21,19 @@ function Navbar() {
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>
-          <HashLink to="/#randomCocktail">Surprise Cocktails</HashLink>
+          <HashLink to="/#randomCocktail" onClick={closeMenu}>
+            Surprise Cocktails
+          </HashLink>
         </li>
         <li className="home-link">
-          <HashLink to="/#mocktails">Mocktails</HashLink>
+          <HashLink to="/#mocktails" onClick={closeMenu}>
+            Mocktails
+          </HashLink>
         </li>
         <li>
-          <HashLink to="/#allCocktails">All Cocktails</HashLink>
+          <HashLink to="/#allCocktails" onClick={closeMenu}>
+            All Cocktails
+          </HashLink>
         </li>
       </ul>
     </nav>
