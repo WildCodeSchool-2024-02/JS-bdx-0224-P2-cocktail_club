@@ -12,7 +12,7 @@ function HomePage() {
         <SeasonCard season="Winter" />
       </section>
       <CocktailsSection
-        idName="popular"
+        idName="popularcocktails"
         source="./src/assets/images/winter1 2.webp"
         title="POPULAR COCKTAILS"
         content="Embark on a journey through our selection of popular cocktails, where classic favorites meet innovative twists. From timeless classics like martinis to trendy creations like espresso martinis, discover the iconic flavors that have captivated cocktail enthusiasts worldwide."
@@ -20,11 +20,11 @@ function HomePage() {
         isNotReverse
       />
       <CocktailsSection
-        idName="randomCocktail"
+        idName="surpriseCocktail"
         source="./src/assets/images/winter5.webp"
-        title="RANDOM COCKTAIL"
+        title="SURPRISE COCKTAIL"
         content="Experience the thrill of surprise with our random cocktail selection. Each sip unveils a new adventure, from exotic concoctions to unexpected flavor combinations. Let your taste buds wander and discover exciting blends that promise to intrigue and delight."
-        path="randomcocktail"
+        path="surprisecocktail"
         isReverse
       />
       <CocktailsSection

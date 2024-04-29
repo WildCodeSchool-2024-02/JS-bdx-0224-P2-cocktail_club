@@ -6,7 +6,7 @@ import "../styles/CocktailsSection.css";
 function CocktailsSection({ idName, source, title, content, path, isReverse }) {
   return (
     <section className="cocktailSection" id={idName}>
-      <img 
+      <img
         src={source}
         alt={`${title} cocktail`}
         className={isReverse ? "isReverse" : null}
@@ -14,7 +14,7 @@ function CocktailsSection({ idName, source, title, content, path, isReverse }) {
       />
       <h2>{title}</h2>
       <p>{content} </p>
-      <OrangeLink name="Cocktail me!" path={path} className="orangeButton" />
+      <OrangeLink name="Shake me !" path={path} className="orangeButton" />
     </section>
   );
 }

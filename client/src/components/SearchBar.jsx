@@ -35,7 +35,7 @@ function SearchBar({ initialCocktailList, setCocktails }) {
         id="searchCocktail"
         name="searchCocktail"
         type="search"
-        placeholder="   Find your cocktail...    🔎 "
+        placeholder="   Find your cocktail...                                                                                           🔎 "
         onChange={handleChange}
         className="SearchBar-input"
       />

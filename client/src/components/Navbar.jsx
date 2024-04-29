@@ -21,18 +21,23 @@ function Navbar() {
       </button>
       <ul className={`burger-menu${menuState ? " active" : ""}`}>
         <li>
-          <HashLink to="/#randomCocktail" onClick={closeMenu}>
-            Surprise Cocktails
+          <HashLink to="/#popularcocktails" onClick={closeMenu}>
+            Popular
           </HashLink>
         </li>
-        <li className="home-link">
+        <li>
+          <HashLink to="/#surpriseCocktail" onClick={closeMenu}>
+            Surprise
+          </HashLink>
+        </li>
+        <li>
           <HashLink to="/#mocktails" onClick={closeMenu}>
             Mocktails
           </HashLink>
         </li>
         <li>
           <HashLink to="/#allCocktails" onClick={closeMenu}>
-            All Cocktails
+            Cocktails
           </HashLink>
         </li>
       </ul>
