@@ -3,14 +3,10 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-
-// page components
-
 import Home from "./pages/HomePage";
 import CocktailPage from "./pages/CocktailPage";
 import CategoryPage from "./pages/CategoryPage";
-
-// router creation
+import ContactPage from "./pages/ContactPage";
 
 function fetchCocktailsBySeason(ingredient) {
   return fetch(
@@ -50,6 +46,20 @@ function allCocktails() {
     .then((data) => data.drinks);
 }
 
+function getPopularCocktails() {
+  return fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink"
+  )
+    .then((response) => response.json())
+    .then((data) => data.drinks);
+}
+
+function getRandomCocktail() {
+  return fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    .then((response) => response.json())
+    .then((data) => data.drinks[0]);
+}
+
 function getCocktailById(cocktailId) {
   return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailId}`
@@ -58,7 +68,7 @@ function getCocktailById(cocktailId) {
     .then((data) => data.drinks[0]);
 }
 
-function mocktails() {
+function getMocktails() {
   return fetch(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
   )
@@ -85,6 +95,16 @@ const router = createBrowserRouter([
         loader: ({ params }) => getCocktailById(params.id),
       },
       {
+        path: "/popularcocktails",
+        element: <CategoryPage />,
+        loader: () => getPopularCocktails(),
+      },
+      {
+        path: "/surprisecocktail",
+        element: <CocktailPage />,
+        loader: () => getRandomCocktail(),
+      },
+      {
         path: "/allCocktails",
         element: <CategoryPage />,
         loader: () => allCocktails(),
@@ -92,7 +112,11 @@ const router = createBrowserRouter([
       {
         path: "/mocktails",
         element: <CategoryPage />,
-        loader: () => mocktails(),
+        loader: () => getMocktails(),
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
     ],
   },

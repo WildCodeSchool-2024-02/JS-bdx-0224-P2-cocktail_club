@@ -14,7 +14,7 @@ function SeasonCard({ season }) {
   const seasonClassName = seasonClassNames[normalizedSeason];
 
   return (
-    <article className={`card ${seasonClassName}`}>
+    <article className={`card ${seasonClassName}`} id="seasonClass">
       <OrangeLink
         name={season.toLowerCase()}
         path={`season/${season.toLowerCase()}`}

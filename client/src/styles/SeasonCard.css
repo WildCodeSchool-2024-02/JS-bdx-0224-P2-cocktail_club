@@ -50,9 +50,8 @@
 
 .orange-button {
   position: absolute;
-  padding: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0.8rem;
+  min-width: 180px;
   top: 50%;
   color: var(--text-color);
   text-align: center;
@@ -88,12 +87,12 @@
 @media screen and (min-width: 992px) {
   .season-section {
     flex-direction: row;
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   .card {
     position: relative;
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 5rem);
     min-width: 33vw;
     width: 100%;
   }

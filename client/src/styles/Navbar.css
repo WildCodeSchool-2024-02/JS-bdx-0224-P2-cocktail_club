@@ -1,14 +1,22 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  background-color: var(--primaryColor);
+}
+
 nav {
   display: grid;
+  max-width: 1200px;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 4.5rem;
   padding: 0 1rem;
-  background-color: var(--primaryColor);
-  z-index: 100;
-  position: fixed;
 }
 
 img {
@@ -33,6 +41,7 @@ button {
   border: none;
   justify-self: end;
 }
+
 .burger-menu {
   position: fixed;
   top: 4.5rem;
@@ -40,7 +49,7 @@ button {
   width: 100%;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -51,14 +60,14 @@ button {
   transition: all 0.3s;
   text-align: center;
 }
+
 .burger-menu.active {
   position: absolute;
-  left: 0;
-  opacity: 1;
-  transform: translateY(0);
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
   z-index: 100;
-  position: absolute;
-  left: 0;
+  opacity: 1;
+  font-size: 1.5rem;
 }
 
 .burger-menu > li > a {
@@ -69,7 +78,7 @@ button {
 
 @media screen and (min-width: 992px) {
   nav {
-    height: 6rem;
+    height: 5rem;
     padding: 0 3rem;
   }
 
@@ -80,6 +89,8 @@ button {
   .burger-menu {
     position: static;
     height: 100%;
+    max-height: 4rem;
+    max-width: 400px;
     width: auto;
     flex-direction: row;
     justify-content: space-between;

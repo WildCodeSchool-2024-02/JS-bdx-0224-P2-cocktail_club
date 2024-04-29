@@ -1,8 +1,7 @@
 .orangeButton {
   position: relative;
-  padding: 0.5rem;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0.8rem;
+  min-width: 180px;
   color: var(--textColor);
   text-align: center;
   text-decoration: none;
