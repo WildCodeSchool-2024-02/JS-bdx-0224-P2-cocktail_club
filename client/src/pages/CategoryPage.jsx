@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import "../styles/CategoryPage.css";
 import CocktailCard from "../components/CocktailCard";
@@ -7,6 +7,10 @@ import SearchBar from "../components/SearchBar";
 function CategoryPage() {
   const initialCocktailList = useLoaderData();
   const [cocktails, setCocktails] = useState(initialCocktailList);
+
+  useEffect(() => {
+    setCocktails(initialCocktailList);
+  }, [initialCocktailList]);
 
   return (
     <main className="categoryPage">
