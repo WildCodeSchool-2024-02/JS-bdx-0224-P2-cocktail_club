@@ -7,13 +7,13 @@
   border: 3px solid var(--secondaryColor);
   border-radius: 20px;
   min-height: calc(100vh - 7.5rem);
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 h2 {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 label {
@@ -23,11 +23,14 @@ label {
 input,
 textarea {
   width: 100%;
+  min-height: 50px;
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  font-family: var(--secondaryFont);
+  font-size: 1.1rem;
 }
 #message {
   height: 120px;
@@ -56,7 +59,8 @@ textarea {
   justify-content: center;
   align-items: center;
   animation: pulse 1.5s infinite;
+  font-size: 2rem;
 }
 .formButton:hover {
-  background-color: #de6d0f;
+  background-color: var(--secondaryColorAlt);
 }
