@@ -1,6 +1,7 @@
 .cocktailCard {
   display: flex;
   flex-direction: column;
+  place-items: center;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -11,7 +12,7 @@
 
 .cocktailCard > img {
   width: clamp(260px, 100%, 500px);
-  max-height: 400px;
+  max-height: 350px;
   border-radius: 15px;
 }
 

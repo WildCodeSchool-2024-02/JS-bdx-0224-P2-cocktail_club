@@ -50,9 +50,8 @@
 
 .orange-button {
   position: absolute;
-  padding: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0.8rem;
+  min-width: 180px;
   top: 50%;
   color: var(--text-color);
   text-align: center;

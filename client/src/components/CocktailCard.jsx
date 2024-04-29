@@ -5,13 +5,12 @@ import "../styles/SeasonCard.css";
 import "../styles/OrangeLink.css";
 
 function CocktailCard({ drink }) {
-  const { strDrink, strDrinkThumb, strInstructions, idDrink } = drink;
+  const { strDrink, strDrinkThumb, idDrink } = drink;
 
   return (
     <article className="cocktailCard">
       <img src={strDrinkThumb} alt={strDrink} />
       <h2 className="cocktailCardTitle">{strDrink}</h2>
-      <p>{strInstructions}</p>
       <OrangeLink
         name="Check Recipe"
         path={`/cocktails/${idDrink}`}

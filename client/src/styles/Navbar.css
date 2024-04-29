@@ -33,12 +33,12 @@ button {
   border: none;
   justify-self: end;
 }
+
 .burger-menu {
   position: fixed;
   top: 4.5rem;
   height: calc(100vh - 4.5rem);
   width: 100%;
-  max-width: 400px;
   background-color: var(--primaryColor);
   color: var(--secondaryColorAlt);
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -52,6 +52,7 @@ button {
   transition: all 0.3s;
   text-align: center;
 }
+
 .burger-menu.active {
   position: absolute;
   left: 50%;
@@ -66,6 +67,7 @@ button {
   font-family: var(--secondaryFont);
   text-decoration: none;
 }
+
 @media screen and (min-width: 992px) {
   nav {
     height: 5rem;
@@ -80,6 +82,7 @@ button {
     position: static;
     height: 100%;
     max-height: 4rem;
+    max-width: 400px;
     width: auto;
     flex-direction: row;
     justify-content: space-between;

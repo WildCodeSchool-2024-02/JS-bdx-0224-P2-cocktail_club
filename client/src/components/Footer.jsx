@@ -10,6 +10,7 @@ function Footer() {
       <Link to="/contact" className="contact">
         Contact
       </Link>
+      <p className="copyright">©CocktailClub - Made with ❤ by Wilders</p>
       <ul>
         <li>
           <Link to="/season/spring">Spring</Link>

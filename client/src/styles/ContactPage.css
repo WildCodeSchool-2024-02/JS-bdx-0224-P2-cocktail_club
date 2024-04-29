@@ -7,11 +7,10 @@
   border: 3px solid var(--secondaryColor);
   border-radius: 20px;
   min-height: calc(100vh - 7.5rem);
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  gap: 2rem;
 }
-h2 {
-  padding-bottom: 1rem;
-}
+
 .form-group {
   margin-bottom: 16px;
 }
